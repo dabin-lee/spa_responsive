@@ -1,0 +1,152 @@
+/* : untill 768~1140  */
+
+@media ( max-width : 1140px ){
+    .body__wrapper{ min-width: 0; overflow: hidden;}
+
+    /* common */
+    .section .title { text-align: center;} /* 디바이스 크기 공통 정리*/
+/*
+    .title + button { margin-top: 3.5087%;}
+    .title h2 { margin-top: 7.280%; line-height: 1.35em;}
+    .title h2 + p { margin-top : 1.7543%;}
+    .title p { line-height: 2em;} */
+
+        /* common - tiles */
+    .tiles article {}
+
+
+
+    /* header */
+    header .inner { max-width: none;}
+    header::after { width: 496px; height: 528px; right: 0; left: 645px; background-size: contain;}
+
+    /* section--banner */
+    header .inner, section .inner {margin: 0;}
+    .section--banner { padding: 57px 0 0 155px; background-size: 142px 315px; box-sizing: border-box; }
+    .section--banner .title { text-align: left;} /* 디바이스 크기 공통 정리*/
+    .section--banner .title p { margin-top: 20px;}
+
+    .section--banner .btn--submit { width: 15%; height: 44px; margin-right: 50px; }
+    .section--banner .btn--submit span { padding: 0 18.620%; font-size: 8.8435%; box-sizing: border-box;}
+    .section--banner .banner__summary--play .btn--play { width: 40px; height:40px; }
+
+    /* section--about */
+    .section--about { padding-top: 142px;  background-size: 78px 71px, 88px 75px; background-position: 193px 66px, 1435px 411px; }
+    .section--about .title::before { width: 50px; height: 42px; top: 0;}
+    .section--about .title { padding-top: 62px; text-align: center;} /* 디바이스 크기 공통 정리*/
+    .section--about .title span { font-size: 13px; letter-spacing: 1.5px; } /* 디바이스 크기 공통 정리*/
+    .section--about .title h2 { font-size: 25px; } /* 디바이스 크기 공통 정리*/
+    .section--about .title p { font-size: 11px; } /* 디바이스 크기 공통 정리*/
+    .section--about .btn__primary--pink { width: 100px; height: 30px; font-size: 15%; } /* 디바이스 크기 공통 정리*/
+
+
+
+
+
+    /* section--feature */
+    .section--feature{ margin-top: 83px; }
+    .section--feature .feature__cont ul li{position: relative; height: 338px; padding-top: 0; background-position: 50% 45%; background-size: 27px;}
+
+    .section--feature .feature__cont ul li:hover{ background-position: 50% 45%; background-size: 27px;}
+    .section--feature .feature__cont ul li span { position: absolute; top: 180px; transform: translateX(-50%); padding-top: 0; font-size: 14.35px; } */
+
+    .section--feature .feature__cont ul li ::before{ content: ''; position:absolute; top:0; left:0; width: 100%; height: 183px; border:1px solid #000;} */
+
+
+
+
+
+    /* section--service  - 공통사항 확인 section--team */
+    .section--service .tiles { margin-top: 7.894%; }
+    .section--service .article__service-tiles { text-align: center; }
+    /* .section--service .service__cont h3 { margin: 35px 0 23x; line-height: 1.3em;}
+    .section--service .tiles article p { line-height: 1.6em; }
+    .section--service .tiles article p + p { margin-top: 5px; } */
+
+
+
+
+
+/*
+
+가변 크기로 만들 박스 가로너비 % 부모박스 가로너비 x 100 = 가변 크기 값
+147 % 1375 x 100 =  12.8947%
+
+http://blog.naver.com/PostView.nhn?blogId=syc0821&logNo=221474505823&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
+padding, margin
+가변 마진 적용할 마진값 % 적용할 박스를 감싸고 있는 가로너비 x 100 = 가변 마진 값
+
+
+
+rate : boxW/contentW
+
+txtW(text-wrap) : '=$('.section234 .text_wrap').innerWidth();
+font-size : txtW*rate
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* section--testimonials
+    .section--testimonials div.inner { width: 965px; margin: 0 auto;}
+    .section--testimonials .slider__arrow--inner { width: 1000px;}
+    .section--testimonials .indicator--article { background-position: 50% 137px; }
+ */
+
+    /* section--team 공통사항 확인 */
+    /* .section--team ..tiles article{} */
+    .section--team .title h2{ margin-top: 130px; }
+    .section--team .team__cont .manager--profile figcaption { text-align: center;}
+    .section--blog .article__blog--tiles .blog--date { margin-bottom: 11px; line-height: 1.4em; }
+    .section--blog .article__blog--tiles h3 { line-height: 1.4em; }
+    .section--blog .article__blog--tiles p { margin-top: 17px; line-height: 1.7em; }
+    .section--blog .article__blog--tiles button.btn__primary{ width: 53.46%; margin-top: 35px; }
+    .section--blog .article__blog--tiles button.btn__primary span{ font-size: .9em; }
+
+
+    /* section--reserved */
+    .section--reserved { height: 642px; margin-top: 186px; padding: 125px 0 130px 95px; box-sizing: border-box; }
+    .section--reserved .reserved--wrap { max-width: none;}
+    .section--reserved .reserved--wrap .reserved__thumbnail { display: none;}
+    .section--reserved .reserved--wrap .reserved__cont { float: none; padding-left : 0; padding-top: 0; text-align: left;}
+    /* .section--reserved div.inner { padding: 125px 0 130px 95px;} */
+    .section--reserved .reserved--wrap .reserved__cont .form--note { width: 660px; margin-top : 55px; }
+
+    /* section--blog */
+    .tiles article{ text-align: center;}
+
+
+    /* section--contact */
+    .section--contact .title h2{ margin-top: 130px;}
+    .section--contact .contact__cont{ margin-top: 0;}
+
+}
+
+
+
+
+/*
+
+가변 크기로 만들 박스 가로너비 % 부모박스 가로너비 x 100 = 가변 크기 값
+147 % 1375 x 100 =  12.8947%
+
+
+padding, margin
+가변 마진 적용할 마진값 %
+
+
+가변패딩 적용 패딩값 % 감싸는 박스가로 너비 x 100 = 패딩값
+*/

@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
     <title>SPA</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
     <link rel="stylesheet" href="./css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./css/common.css" type="text/css" />
     <!-- <link rel="stylesheet" href="css/timepick.css" type="text/css" /> -->
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
+
+    <!-- <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main_pad.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main_mobile.css" type="text/css" /> -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="(max-width: 1140px)" href="./css/main_pad.css">
+    <link rel="stylesheet" media="(max-width: 767px)" href="./css/main_mobile.css">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <!-- <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script> -->
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
@@ -35,33 +46,48 @@
         <header>
             <div class="inner">
                 <h1 class="header__logo"><a href="#"><img src="./images/header_logo.png" alt="spa-Massage"></a></h1>
-                <nav>
-                    <ul id="gnb" class="nav--bar">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">FEATURE</a></li>
-                        <li><a href="#">SERVICE</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </nav>
+                <div class="nav">
+                    <nav>
+                        <div class="gnb__menu--bar">
+                            <span class="menu--bar"></span>
+                            <span class="menu--bar"></span>
+                            <span class="menu--bar"></span>
+                        </div>
+                        <ul id="gnb" class="nav--bar">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">FEATURE</a></li>
+                            <li><a href="#">SERVICE</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header_bg">
+                <img src="./images/bg_02.png" alt="pink">
             </div>
         </header>
 
         <main>
             <div id="container">
                 <section>
-                    <div class="section--banner">
+                    <div class="section section--banner">
                         <div class="inner">
                             <div class="title">
                                 <strong>spa & beauty center</strong>
                                 <h2>Beauty and success<br>starts here.</h2>
-                                <p>Together creeping heaven upon third dominion be upon won't darkness rule<br>behold it createdgood saw after she'd Our set living.</p>
+                                <p>Together creeping heaven upon third dominion be upon won't darkness rule</p>
+                                <p>behold it createdgood saw after she'd Our set living.</p>
                             </div>
                             <div class="banner__btn">
                                 <button type="submit" class="btn--submit"><span><em>RESERVED NOW</em></span></button>
                                 <a href="#" class="banner__summary--play">
-                                    <span class="btn--play"></span>
-                                    <span>Watch our story</span>
+                                    <div class="btn--play">
+                                        <div class="playbtn_img">
+                                            <img src="./images/arrow_btn_.png" alt="playbutton">
+                                        </div>
+                                    </div>
+                                    <span class="btn__play--tit">Watch our story</span>
                                 </a>
                             </div>
                         </div>
@@ -69,12 +95,12 @@
                 </section><!-- //banner -->
 
                 <section>
-                    <div class="section--about">
+                    <div class="section section--about">
                         <div class="inner">
-                            <div class="title">
+                            <div class="title butterfly">
                                 <span>About our spa center</span>
                                 <h2>Come and you will be Inspired!</h2>
-                                <p>Itâ€™s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the skygets darker and darker</p>
+                                <p>Itâ€™s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit<br> nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the<br> ears, the skygets darker and darker</p>
                             </div>
                             <button type="button" class="btn__primary--pink"><span>READ MORE</span></button>
                         </div>
@@ -82,14 +108,14 @@
                 </section><!-- //About -->
 
                 <section>
-                    <div class="section--feature">
+                    <div class="section section--feature">
                         <!-- <div class="inner"> -->
                             <div class="feature--inner feature__cont">
                                 <ul>
-                                    <li class="feature__block"><span>Body Treatment</span></li>
-                                    <li><span>Body Treatment</span></li>
-                                    <li><span>Body Treatment</span></li>
-                                    <li><span>Body Treatment</span></li>
+                                    <li class="feature__block">1<div><span>Body Treatment</span></div></li>
+                                    <li>2<div><span>Body Treatment</span></div></li>
+                                    <li>3<div><span>Body Treatment</span></div></li>
+                                    <li>4<div><span>Body Treatment</span></div></li>
                                 </ul>
                             </div>
                         <!-- </div> -->
@@ -97,42 +123,54 @@
                 </section><!-- //Feature -->
 
                 <section>
-                    <div class="section--service">
+                    <div class="section section--service">
                         <div class="inner">
                             <div class="title">
                                 <h2>Popular Procedures</h2>
-                                <p>To doesn't his appear replenish together called he of mad place won't wherein blessed second every<br>wherein were meat kind wherein and martcin </p>
+                                <p>To doesn't his appear replenish together called he of mad place won't wherein blessed second every<br>where in were meat kind wherein and martcin </p>
                             </div>
                             <div class="tiles service__cont">
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="summary--img">
-                                            <img src="./images/Massage_02.jpg" alt="">
-                                            <!-- alt값은 아래 h3 -->
+                                        <div class="article_padding">
+                                            <div class="summary--img">
+                                                <img src="./images/Massage_02.jpg" alt="">
+                                                <!-- alt값은 아래 h3 -->
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h3>Massage Therapy</h3>
+                                                <p>Living winged said you darkness you're divide</p><p>gathered and bring one seasons facegreat dr</p><p>Waters firmament place which.</p>
+                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                            </div>
                                         </div>
-                                        <h3>Massage Therapy</h3>
-                                        <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
-                                        <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="summary--img">
-                                            <img src="./images/Massage_03.jpg">
+                                        <div class="article_padding">
+                                            <div class="summary--img">
+                                                <img src="./images/Massage_03.jpg">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h3>Massage Therapy</h3>
+                                                <p>Living winged said you darkness you're divide</p><p>gathered and bring one seasons facegreat dr</p><p>Waters firmament place which.</p>
+                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                            </div>
                                         </div>
-                                        <h3>Massage Therapy</h3>
-                                        <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
-                                        <button type="button" class="btn__primary"><span>READ MORE</span></button>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="summary--img">
-                                            <img src="./images/Massage_02.jpg">
+                                        <div class="article_padding">
+                                            <div class="summary--img">
+                                                <img src="./images/Massage_02.jpg">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h3>Massage Therapy</h3>
+                                                <p>Living winged said you darkness you're divide</p><p>gathered and bring one seasons facegreat dr</p><p>Waters firmament place which.</p>
+                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                            </div>
                                         </div>
-                                        <h3>Massage Therapy</h3>
-                                        <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
-                                        <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
                                     </div>
                                 </article>
                             </div>
@@ -141,7 +179,7 @@
                 </section><!-- //Service -->
 
                 <section>
-                    <div class="section--testimonials">
+                    <div class="section section--testimonials">
                         <div class="article__group--testimonials">
                             <div class="indicator--article">
                                 <div class="inner indicator--item">
@@ -189,7 +227,6 @@
                             </div>
                         </div>
 
-
                         <!-- indicator Btn list -->
                         <ul class="slider__indicator--btn">
                             <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
@@ -222,7 +259,7 @@
                 </section><!-- //testimonials -->
 
                 <section>
-                    <div class="section--team">
+                    <div class="section section--team">
                         <div class="inner">
                             <div class="title">
                                 <h2>Experienced Team</h2>
@@ -288,10 +325,10 @@
                 </section><!-- //Team -->
 
                 <section>
-                    <div class="section--reserved">
+                    <div class="section section--reserved">
                         <div class="reserved--wrap inner">
                             <div class="reserved__thumbnail">
-                                <img src="" alt="reserve">
+                                <img src="./images/reserve.jpg" alt="reserve">
                             </div>
                             <div class="reserved__cont">
                                 <form method="POST">
@@ -309,7 +346,7 @@
                                     <input type="text" id="timePicker" class="reseve--time" placeholder="TIME">
                                     <input type="text" class="form--note" title="YOUR NOTE" value="" size="50" placeholder="YOUR NOTE">
 
-                                    <button type="submit" class="btn__primary--pink">Make an Appointment</button>
+                                    <button type="submit" class="btn__primary--pink"><span>Make an Appointment</span></button>
                                 </form>
                             </div>
                         </div>
@@ -317,7 +354,7 @@
                 </section><!-- // section--reserved -->
 
                 <section>
-                    <div class="section--blog">
+                    <div class="section section--blog">
                         <div class="inner">
                             <div class="title">
                                 <h2>Latest From Blog</h2>
@@ -326,35 +363,47 @@
                             <div class="tiles blog__cont">
                                 <article>
                                     <div class="article__blog--tiles">
-                                        <div class="summary--img">
-                                            <img src="./images/relaxation.jpg" alt="">
+                                        <div class="article_padding">
+                                            <div class="summary--img">
+                                                <img src="./images/relaxation.jpg" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <h3>Had seed herbgrass mids</h3>
+                                                <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
+                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                            </div>
                                         </div>
-                                        <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
-                                        <h3>Had seed herbgrass mids</h3>
-                                        <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                                        <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__blog--tiles">
-                                        <div class="summary--img">
-                                            <img src="./images/relaxation.jpg" alt="">
+                                        <div class="article_padding">
+                                            <div class="summary--img">
+                                                <img src="./images/relaxation.jpg" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <h3>Had seed herbgrass mids</h3>
+                                                <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
+                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                            </div>
                                         </div>
-                                        <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
-                                        <h3>Divid image unto creeping</h3>
-                                        <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                                        <button type="button" class="btn__primary"><span>READ MORE</span></button>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__blog--tiles">
-                                        <div class="summary--img">
-                                            <img src="./images/relaxation.jpg" alt="">
+                                        <div class="article_padding">
+                                            <div class="summary--img">
+                                                <img src="./images/relaxation.jpg" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <h3>Had seed herbgrass mids</h3>
+                                                <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
+                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                            </div>
                                         </div>
-                                        <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
-                                        <h3>Had seed herbgrass mids</h3>
-                                        <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                                        <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
                                     </div>
                                 </article>
                             </div>
@@ -363,7 +412,7 @@
                 </section><!-- //blog -->
 
                 <section>
-                    <div class="section--contact">
+                    <div class="section section--contact">
                         <div class="inner">
                             <div class="title">
                                 <h2>Get In Touch</h2>
@@ -372,7 +421,9 @@
                             <div class="contact__cont">
                                 <ul class="visit--info">
                                     <li>
-                                        <h3>address</h3>
+                                        <h3>
+                                            <span>address</span>
+                                        </h3>
                                         <p>848 E 28th ST, BROOKLYN <br>NEW YORK, USa</p>
                                     </li>
                                     <li>
@@ -388,7 +439,7 @@
                                     <input type="text" id="input-07" title="FIRST NAME" value="" placeholder="FIRST NAME">
                                     <input type="email" id="input-08" title="EMAIL ADDRESS" value="" placeholder="EMAIL ADDRESS">
                                     <input type="text" class="input--board" id="input-09" title="WRITE COMMENT" value="" placeholder="WRITE COMMENT">
-                                    <button type="submit" class="btn__primary--pink">SUBMIT NOW</button>
+                                    <button type="submit" class="btn__primary--pink"><span>SUBMIT NOW</span></button>
                                 </form>
                             </div>
                         </div>
@@ -438,6 +489,7 @@
         </footer>
     </div>
 <script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/script_responsive.js"></script>
 </body>
 </html>
 

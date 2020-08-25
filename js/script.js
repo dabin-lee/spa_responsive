@@ -1,4 +1,47 @@
 $(function(){
+
+
+
+    // section feature
+
+    var $feaTureCont = $('.feature__cont'),
+        $feaTureContUl = $feaTureCont.find('ul'),
+        $feaTureContLi = $feaTureContUl.find('li'),
+        $feacnt = 0;
+
+
+
+
+        // swipe - feature
+        $feaTureCont.swipe({
+            swipeLeft: function(left){
+                $feaTureContUl.css({marginLeft: -100 + '%'});
+                swipeLeftFeatur();
+            },
+            swipeRight : function(right){
+                $feaTureContUl.css({left: 100 + '%'});
+                swipeRightFeatur();
+            }
+        })
+
+        function swipeLeftFeatur(){
+            feacnt--;
+            mainswipe();
+        }
+        function swipeRightFeatur(){
+            feacnt++;
+            mainswipe();
+        }
+
+        // function featurecontList(){
+        //     $feaTureContLi.each(function(fea){
+        //         var newLeft = (fea * 100) + '%';
+        //         $(this).css({left: newLeft});
+        //     })
+        // };
+        // featurecontList()
+
+
     // section--team
     var $maNagerLi = $('.tiles > li.manager--profile'),
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
