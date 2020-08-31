@@ -19,10 +19,12 @@ $(function(){
                 $('.navbar--on').stop().animate({opacity:1},0,function(){
                     $(this).stop().animate({left : 0}, 500);
                 })
+                $('.gnb__menu--bar').addClass('addClosebar');
                 console.log(clkbtn);
             }else if( clkbtn == true ){
                 clkbtn = false;
                 console.log(clkbtn);
+                $('.gnb__menu--bar').removeClass('addClosebar');
                 $('.navbar--on').stop().animate({left : 100 +'%'}, 500, function(){
                     $(this).stop().animate({opacity : 0},0);
                 })

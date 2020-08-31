@@ -4,7 +4,7 @@
     .body__wrapper {min-width: 0; overflow: hidden;}
 
     /* common */
-    .section .title {text-align: center;} /* 디바이스 크기 공통 정리*/
+    .section .title {text-align: center;}
 
     /* common - tiles */
 
@@ -14,10 +14,10 @@
     /* section--banner */
     header .inner, section .inner {margin: 0;}
     .section--banner {padding: 5.52% 0 0 13.68%; background-size: 12.45% auto; box-sizing: border-box;}
-    .section--banner .title {text-align: left;} /* 디바이스 크기 공통 정리*/
+    .section--banner .title {text-align: left;}
     .section--banner .title p {margin-top: 1.75%;}
 
-    .section--banner .btn--submit {width: 15%; height: 44px; margin-right: 50px;}
+    .section--banner .btn--submit {width: 15%; height: 44px; margin-right: 5.15%;}
     .section--banner .btn--submit span {padding: 0 18.620%; font-size: 8.8435%; box-sizing: border-box;}
     .section--banner .banner__summary--play {width: 14.91%;}
     .section--banner .banner__summary--play .btn--play {width: 23.52%; height: 40px;}
@@ -25,11 +25,11 @@
     /* section--about */
     .section--about {padding-top: 12.28%; background-position-y: calc(100% - 240px), calc(100% - 130px);}
     .section--about .title::before {width: 4.38%; height: 42px; top: 0;}
-    .section--about .title {padding-top: 5.43%; text-align: center;} /* 디바이스 크기 공통 정리*/
-    .section--about .title span {font-size: 0.86em; letter-spacing: 1.5px;} /* 디바이스 크기 공통 정리*/
-    .section--about .title h2 {font-size: 25px;} /* 디바이스 크기 공통 정리*/
-    .section--about .title p {font-size: 11px;} /* 디바이스 크기 공통 정리*/
-    .section--about .btn__primary--pink {width: 100px; height: 30px; font-size: 15%;} /* 디바이스 크기 공통 정리*/
+    .section--about .title {padding-top: 5.43%; text-align: center;}
+    .section--about .title span {font-size: 0.86em; letter-spacing: 1.5px;}
+    .section--about .title h2 {font-size: 1.66em;}
+    .section--about .title p {font-size: 0.73em;}
+    .section--about .btn__primary--pink {width: 8.77%; height: 30px; font-size: 15%;}
 
     /* section--feature */
     .section--feature {margin-top: 7.28%;}
