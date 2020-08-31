@@ -180,22 +180,6 @@ $(function(){
             }
         }
 
-
-        // 스와이프
-        $slideGroup.swipe({
-            swipeLeft : function(){
-				if( !$slides.is(':animated') ){
-					clearInterval($setId);
-                    nextSlide();
-                }
-            },swipeRight : function(){
-                if( !$slides.is(':animated') ){
-					clearInterval($setId);
-                    prevSlide();
-                }
-            }
-        })
-
 /*
         //////////////////////////////////////////
         // [objectfix IE]
