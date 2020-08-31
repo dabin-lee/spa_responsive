@@ -1,47 +1,6 @@
 $(function(){
 
 
-
-    // section feature
-
-    var $feaTureCont = $('.feature__cont'),
-        $feaTureContUl = $feaTureCont.find('ul'),
-        $feaTureContLi = $feaTureContUl.find('li'),
-        $feacnt = 0;
-
-
-
-
-        // swipe - feature
-        $feaTureCont.swipe({
-            swipeLeft: function(left){
-                $feaTureContUl.css({marginLeft: -100 + '%'});
-                swipeLeftFeatur();
-            },
-            swipeRight : function(right){
-                $feaTureContUl.css({left: 100 + '%'});
-                swipeRightFeatur();
-            }
-        })
-
-        function swipeLeftFeatur(){
-            feacnt--;
-            mainswipe();
-        }
-        function swipeRightFeatur(){
-            feacnt++;
-            mainswipe();
-        }
-
-        // function featurecontList(){
-        //     $feaTureContLi.each(function(fea){
-        //         var newLeft = (fea * 100) + '%';
-        //         $(this).css({left: newLeft});
-        //     })
-        // };
-        // featurecontList()
-
-
     // section--team
     var $maNagerLi = $('.tiles > li.manager--profile'),
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
@@ -135,6 +94,7 @@ $(function(){
             //각각의 인디게이터
             $inDicatorBtn.each(function(e){
                 var ind_ = $(this).index();
+                // console.log(ind_);
                 $(this).on({
                     click : function(){
 						cnt = ind_;
@@ -165,9 +125,7 @@ $(function(){
                 }
             })
 
-
         //////////////////////////////////////////////////////////
-
         // 플레이인디게이터 버튼 클릭
         $rollBtnList.each(function(e){
             var rol = $(this).index();
@@ -177,7 +135,6 @@ $(function(){
                     cnt = rol-1;
                     goToslide();
                 }
-
             })
         });
 
@@ -204,14 +161,12 @@ $(function(){
         autoPlayFn();
 
 
-
         // stop - 버튼
         $rollBtnPlay.on({
             click : function(){
                 rollIngBtn();
             }
         });
-
 
 
         //플레이, 일시중지 버튼
@@ -226,6 +181,20 @@ $(function(){
         }
 
 
+        // 스와이프
+        $slideGroup.swipe({
+            swipeLeft : function(){
+				if( !$slides.is(':animated') ){
+					clearInterval($setId);
+                    nextSlide();
+                }
+            },swipeRight : function(){
+                if( !$slides.is(':animated') ){
+					clearInterval($setId);
+                    prevSlide();
+                }
+            }
+        })
 
 /*
         //////////////////////////////////////////

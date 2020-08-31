@@ -48,17 +48,17 @@
                 <h1 class="header__logo"><a href="#"><img src="./images/header_logo.png" alt="spa-Massage"></a></h1>
                 <div class="nav">
                     <nav>
-                        <div class="gnb__menu--bar">
+                        <div class="gnb__menu--bar" role="tablist">
                             <span class="menu--bar"></span>
                             <span class="menu--bar"></span>
                             <span class="menu--bar"></span>
                         </div>
-                        <ul id="gnb" class="nav--bar">
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">FEATURE</a></li>
-                            <li><a href="#">SERVICE</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                        <ul id="gnb" class="nav--bar navbar--on" >
+                            <li role="tab"><a href="#">HOME</a></li>
+                            <li role="tab"><a href="#">ABOUT</a></li>
+                            <li role="tab"><a href="#">FEATURE</a></li>
+                            <li role="tab"><a href="#">SERVICE</a></li>
+                            <li role="tab"><a href="#">CONTACT</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -111,12 +111,18 @@
                     <div class="section section--feature">
                         <!-- <div class="inner"> -->
                             <div class="feature--inner feature__cont">
-                                <ul>
-                                    <li class="feature__block">1<div><span>Body Treatment</span></div></li>
-                                    <li>2<div><span>Body Treatment</span></div></li>
-                                    <li>3<div><span>Body Treatment</span></div></li>
-                                    <li>4<div><span>Body Treatment</span></div></li>
-                                </ul>
+                                <div class="feature__mo">
+                                    <ul>
+                                        <li class="swipe0 feature__block">1<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe1">2<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe2">3<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe3">4<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe swipe0">1<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe swipe1">2<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe swipe2">3<div><span>Body Treatment</span></div></li>
+                                        <li class="swipe swipe3">4<div><span>Body Treatment</span></div></li>
+                                    </ul>
+                                </div>
                             </div>
                         <!-- </div> -->
                     </div>
