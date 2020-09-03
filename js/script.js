@@ -278,7 +278,7 @@ $(function(){
 
                 $('.blog__cont > .article__blog--tiles').height( secBlog * 0.981);
                 $('.article__blog--tiles .summary--img').height( BlogImgW * 0.981);
-                if( winW > 767 ){$('.article__blog--tiles button.btn__primary').height( secBlog * 0.316);}
+                if( winW = 767 ){$('.article__blog--tiles button.btn__primary').height( secBlog * 0.316);}
 
         // 9. section--contact
             var visitInputW = $('.visit--form > input').width();
