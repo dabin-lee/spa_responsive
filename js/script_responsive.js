@@ -6,7 +6,7 @@ $(function(){
 
         // header = navbar
         var clkbtn = false;
-        $('.gnb__menu--bar').on({
+        $('.gnb-menu__bar').on({
             click : function(){
                 menuBarClickFn();
             }
@@ -19,12 +19,12 @@ $(function(){
                 $('.navbar--on').stop().animate({opacity:1},0,function(){
                     $(this).stop().animate({left : 0}, 500);
                 })
-                $('.gnb__menu--bar').addClass('addClosebar');
+                $('.gnb-menu__bar').addClass('addClosebar');
                 console.log(clkbtn);
             }else if( clkbtn == true ){
                 clkbtn = false;
                 console.log(clkbtn);
-                $('.gnb__menu--bar').removeClass('addClosebar');
+                $('.gnb-menu__bar').removeClass('addClosebar');
                 $('.navbar--on').stop().animate({left : 100 +'%'}, 500, function(){
                     $(this).stop().animate({opacity : 0},0);
                 })

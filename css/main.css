@@ -5,16 +5,16 @@ header .inner {display:flex;}
 header .header__logo {padding: 1.75% 0 0 8.421%;}
 header .header__logo a {display: block; width: 4.73%; height: 7.19%;}
 header .nav {width:100%; padding: 6.49% 0 0 18.77%; z-index: 9998;}
-header .nav .gnb__menu--bar {display: none;}
+header .nav .gnb-menu__bar {display: none;}
 header .nav ul li {margin-right: 5.805%;}
 
 .header_bg{position: absolute; top: 0; right: 0%; width: 43.82%; height: 890px;}
 .header_bg img{max-width: 100%;}
 
-/* skip--menu__accessbility */
-.skip--menu {position: absolute; width: 100%; z-index: 9999;}
-.skip--menu ul li a {display: block; position: absolute; top: -100px; left: 0; width: 100%; height:50px; background: #ff817e; color:#fff; font-weight: bold; font-size: 20px; text-align: center; line-height:50px; box-sizing:border-box;}
-.skip--menu ul li a:focus {top:0;}
+/* skip-menu__accessbility */
+.skip-menu {position: absolute; width: 100%; z-index: 9999;}
+.skip-menu ul li a {display: block; position: absolute; top: -100px; left: 0; width: 100%; height:50px; background: #ff817e; color:#fff; font-weight: bold; font-size: 20px; text-align: center; line-height:50px; box-sizing:border-box;}
+.skip-menu ul li a:focus {top:0;}
 
 
 /* 1. section--banner */
@@ -219,9 +219,9 @@ footer {width: 100%; margin-top: 7.35%; background: #fff9f8;}
 footer .inner {max-width: 1140px; margin: 0 auto; padding-top: 8.77%; text-align: center;}
 footer .footer__logo {margin: 0 auto; width: 9.47%; height: 78px; text-indent: -9999px;}
 footer .footer__logo a {display: block; width: 100%; height: 100%; background: url(../images/footer_logo.png)no-repeat; background-size: contain;}
-footer .inner .footer__nav--bar {width: 46.49%; margin: 0 auto;}
-footer .inner .footer__nav--bar .nav--bar {margin-top: 8.49%; justify-content: space-between;}
-footer .inner .footer__nav--bar .nav--bar li a {font-size: 1em; line-height: 1em;}
+footer .inner .footer-nav__bar {width: 46.49%; margin: 0 auto;}
+footer .inner .footer-nav__bar .nav__bar {margin-top: 8.49%; justify-content: space-between;}
+footer .inner .footer-nav__bar .nav__bar li a {font-size: 1em; line-height: 1em;}
 
 footer .footer__list--sns ul{display: flex; justify-content: center; width:100%; margin-top: 2.631%;}
 footer .footer__list--sns ul li {position: relative; margin: 0 1.31%;}

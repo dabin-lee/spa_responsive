@@ -63,6 +63,6 @@ section > div { position: relative;}
 
 
 /* nav - hover */
-.nav--bar{display:flex;}
-.nav--bar li a { display: block; font-weight: 500; font-size: 0.93em; line-height: 1.45em; color:#263a41;}
-.nav--bar li:hover a { color: #ff817e; transition: .3s;}
+.nav__bar{display:flex;}
+.nav__bar li a { display: block; font-weight: 500; font-size: 0.93em; line-height: 1.45em; color:#263a41;}
+.nav__bar li:hover a { color: #ff817e; transition: .3s;}

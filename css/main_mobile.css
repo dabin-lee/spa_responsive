@@ -22,11 +22,11 @@
     header .header__logo a img {max-width: 100%;}
 
     header .nav {padding: 0;}
-    header .nav .gnb__menu--bar {display: grid; grid-template-rows: repeat(3, 1fr); float: right; width: 80px; height: 80px; margin-top: 20px; padding: 8px 13px; cursor: pointer; box-sizing: border-box;}
-    header .nav .gnb__menu--bar span {display: inline-block; width: 100%; height: 8px; margin-bottom: 20px; background: #ff817e; box-sizing: border-box;
+    header .nav .gnb-menu__bar {display: grid; grid-template-rows: repeat(3, 1fr); float: right; width: 80px; height: 80px; margin-top: 20px; padding: 8px 13px; cursor: pointer; box-sizing: border-box;}
+    header .nav .gnb-menu__bar span {display: inline-block; width: 100%; height: 8px; margin-bottom: 20px; background: #ff817e; box-sizing: border-box;
         transition: .3s;}
-    header .nav .gnb__menu--bar span:last-child{margin-bottom: 0;}
-    header .nav .gnb__menu--bar span:nth-child(2){left:0%;}
+    header .nav .gnb-menu__bar span:last-child{margin-bottom: 0;}
+    header .nav .gnb-menu__bar span:nth-child(2){left:0%;}
 
     header .nav .addClosebar {position: relative;}
     header .nav .addClosebar span {position: absolute; top: 50%; transition: .3s;}
@@ -35,8 +35,8 @@
     header .nav .addClosebar span:nth-child(3){transform: rotate(135deg);}
 
 
-    /* click - nav--bar  */
-    header .nav--bar{display: none;}
+    /* click - nav__bar  */
+    header .nav__bar{display: none;}
     header .nav ul.navbar--on{display: block; position: absolute; left: 100%; width: 100%; opacity: 0;}
     header .nav ul.navbar--on {top:110px; width:100%; padding: 10px; box-sizing: border-box;}
     header .nav ul.navbar--on li {width:100%; margin-right: 0%; text-align: center; border-bottom: 1px solid #fff;}
@@ -146,7 +146,7 @@
     .footer {margin-top: 50px;}
     footer .inner {padding: 110px 32px 0 32px;}
     footer .footer__logo {width: 115px;}
-    footer .inner .footer__nav--bar {width: 100%; font-size: 0.933em;}
+    footer .inner .footer-nav__bar {width: 100%; font-size: 0.933em;}
 
     footer .footer__list--sns {margin-top: 45px;}
     footer .footer__list--sns ul .facebook::before {left: 16px;}

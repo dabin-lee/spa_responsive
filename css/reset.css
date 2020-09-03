@@ -28,7 +28,6 @@ button:focus, a:focus, input:focus, select:focus, li:focus { outline:solid 1px #
 button:focus { border: 1px solid #ddd;}
 
 /* body {font-size:12px; font-family: arial, sans-serif;} */
-h1, h2, h3, h4, h5, h6{}
 ol, ul { list-style: none; }
 img { border: 0; line-height:0;}
 a { color: #333; text-decoration: none; }
