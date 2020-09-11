@@ -252,12 +252,6 @@ $(function(){
             }
         });
 
-            // 5. testimonials
-            var tesTimonials = $('.testimonials .article__testimonials').width(),
-                sec5H = $('.testimonials').height();
-                $('.testimonials .article__testimonials').height( tesTimonials * 0.3746);
-                $('.testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2});
-
             // 6. team
             var memBersnsBtn = $('.on .btn__sns > ul').width();
                 $('.on .btn__sns > ul').height( memBersnsBtn * 0.19 );
