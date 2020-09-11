@@ -10,7 +10,7 @@ $(function(){
             mouseenter:	function(){
                 $(this).addClass('on');
                 $Tab.focus()
-                $tabList.find('li').eq().attr('tabIndexecutive--name', 0);
+                $tabList.find('li').eq().attr('tabIndex', 0);
             },
             focus:	function(){  //키보드접근 focusin == focus    커보드 떠날 때 focusout == blur
                 $(this).addClass('on');
@@ -31,7 +31,7 @@ $(function(){
         $off_SnsBtn.on("focusout", function(){
 			var	_this = $(this),
                     _thisLi = _this.closest('li.team__manager'); //가까운 li가
-                    console.log($off_SnsBtn);
+                    // console.log($off_SnsBtn);
 			if(_thisLi.hasClass('on') == true ){
 				_thisLi.removeClass('on');
 			}else{
@@ -47,8 +47,8 @@ $(function(){
             $duration = 500,
             $easing = 'easeInOutExpo',
             $arrowBox = $('.slide__wrap'),
-            $prevArrow = $arrowBox.find('.arrow--prevBtn'),
-            $nextArrow = $arrowBox.find('.arrow--nextBtn'),
+            $prevArrow = $arrowBox.find('.slider__arrow-btn--prev'),
+            $nextArrow = $arrowBox.find('.slider__arrow-btn--next'),
             $inDicatorBtn = $('.indicator__btn');
 
         var $pause = 0,
@@ -237,10 +237,6 @@ $(function(){
             //반응형
             breakpointsInverse: false,
             breakpoints: {
-                1530: {
-                    spaceBetween: 0,
-                    allowTouchMove: false,
-                },
                 768:{
                     spaceBetween: 0,
                     allowTouchMove: false,
@@ -267,18 +263,11 @@ $(function(){
                 $('.on .btn__sns > ul').height( memBersnsBtn * 0.19 );
 
             // 7. reserved__wrap
-            var reservedBtnW = $('.reserved__cont > form > .btn__primary--pink').width();
-                $('.reserved__cont > form > .btn__primary--pink').height( reservedBtnW * 0.25 );
-                if(winW <= 767){
-                    $('.reserved__cont > form > .btn__primary--pink').height( 200 * 0.25 );
-                }
-
-            // 8. section--blog
-            // var secBlog = $('.blog__cont > article').width(),
-            //     BlogImgW = $('.article__blog-tiles .article_img').width();
-
-            //     $('.blog__cont > .article__blog-tiles').height( secBlog * 0.981);
-            //     $('.article__blog-tiles .article_img').height( BlogImgW * 0.981);
+            // var reservedBtnW = $('.reserved__cont > form > .btn__primary--pink').width();
+            //     $('.reserved__cont > form > .btn__primary--pink').height( reservedBtnW * 0.25 );
+            //     if(winW <= 767){
+            //         $('.reserved__cont > form > .btn__primary--pink').height( 200 * 0.25 );
+            //     }
 
             // 9. section--contact
             var visitInputW = $('.contact__form > input').width();
@@ -296,16 +285,13 @@ $(function(){
                 btnPrimary.height( btnW2 *0.2941 );
                 btnPrimary.height( btnW2 *0.2941 );
 
-             //common - tiles
+            //common - tiles
             $('.tiles__btn-list').height( $('.tiles__btn-list').width() * 0.2941 );
 
-
-        if( winW <= 767 ){
-            $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
-            // $('.article__blog-tiles button.btn__primary').height( secBlog * 0.316);}
-            $('.banner__btn-play').height('50px');
-            // $('.testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2.5});
-        };
+            if( winW <= 767 ){
+                $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
+                $('.banner__btn-play').height('50px');
+            };
 
         });
     }); //반응형

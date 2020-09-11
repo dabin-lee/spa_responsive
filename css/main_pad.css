@@ -15,10 +15,6 @@
     header .inner, section .inner {margin: 0;}
     .banner {padding: 5.52% 0 0 13.68%; background-size: 12.45% auto; box-sizing: border-box;}
     .banner .title {text-align: left;}
-    .banner .title p {margin-top: 1.75%;}
-
-    .banner .banner__btn-submit {width: 15%; height: 44px; margin-right: 5.15%;}
-    .banner .banner__btn-submit span {padding: 0 18.620%; font-size: 8.8435%; box-sizing: border-box;}
 
     /* about */
     .about {padding-top: 12.28%; background-position-y: calc(100% - 240px), calc(100% - 130px);}
@@ -59,9 +55,6 @@
     .reserved .reserved__wrap .reserved__cont {float: none; width: 100%; padding-left: 0; padding-top: 0; text-align: left;}
     .reserved .reserved__wrap .reserved__cont .form__note {width: calc(100% - 23.86%); margin-top: 5.38%;}
     .reserved .reserved__wrap .reserved__cont input, select {width: calc(100% - 63%); margin-right: 20px; margin-bottom: 3.91%;}
-
-    .reserved .reserved__wrap .reserved__cont .btn__primary--pink {width: 19.45%; padding:0 2.9%;}
-    .reserved .reserved__wrap .reserved__cont .btn__primary--pink span {font-size: 0.933em;}
 
     /* section--blog */
     .tiles article {text-align: center;}

@@ -95,7 +95,7 @@ $(function(){
                 // console.log(ind_);
                 $(this).on({
                     click : function(){
-						cnt = ind_;
+						cnt = ind_-1;
                         goToslide();
                     }
                 })
@@ -262,14 +262,7 @@ $(function(){
             var memBersnsBtn = $('.on .btn__sns > ul').width();
                 $('.on .btn__sns > ul').height( memBersnsBtn * 0.19 );
 
-            // 7. reserved__wrap
-            var reservedBtnW = $('.reserved__cont > form > .btn__primary--pink').width();
-                $('.reserved__cont > form > .btn__primary--pink').height( reservedBtnW * 0.25 );
-                if(winW <= 767){
-                    $('.reserved__cont > form > .btn__primary--pink').height( 200 * 0.25 );
-                }
-
-            // 9. section--contact
+                // 9. section--contact
             var visitInputW = $('.contact__form > input').width();
                 $('.contact__form .input--board').css({height: visitInputW * 0.2707 });
 

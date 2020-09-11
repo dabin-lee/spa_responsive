@@ -50,7 +50,7 @@
     .banner .banner__btn-submit {width: 170px; height: 50px; margin-right: 0;}
     .about{margin-top: 96px; background: none;}
 
-    .banner .banner__btn-play{width: 30.46%; margin-top: 47px; border: none;}
+    .banner .banner__btn-play{margin-top: 47px;}
     .about .title {padding: 103px 0 0;}
     .about .title::before{width: 84px; height:70px;}
     .about .title span {font-size: 20px;}
@@ -80,7 +80,7 @@
     /* testimonials */
     .testimonials {margin-top: 72px;}
     .testimonials .testimonials__item p {padding-top: 50px;}
-    .testimonials .testimonials__item .testimonials__photo {width: 10%;}
+    /* .testimonials .testimonials__item .testimonials__photo {width: 10%;} */
 
     /* team */
     .team .title h2 {margin-top: 50px;}
@@ -114,7 +114,7 @@
     .reserved .reserved__wrap .reserved__cont input, select {width: 320px;}
     .reserved .reserved__wrap .reserved__cont .form__note {margin-bottom:40px;}
     .reserved .reserved__wrap .reserved__cont .btn__primary--pink {width: 200px; height: 50px;}
-    .reserved .reserved__wrap .reserved__cont .btn__primary--pink span {font-size: 1rem;}
+    .reserved .reserved__wrap .reserved__cont .btn__primary--pink span {font-size: 0.83rem;}
 
     /* section--blog */
     .blog__cont {padding: 0 40px;}
