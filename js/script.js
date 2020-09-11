@@ -31,7 +31,7 @@ $(function(){
         $off_SnsBtn.on("focusout", function(){
 			var	_this = $(this),
                     _thisLi = _this.closest('li.team__manager'); //가까운 li가
-                    console.log($off_SnsBtn);
+                    // console.log($off_SnsBtn);
 			if(_thisLi.hasClass('on') == true ){
 				_thisLi.removeClass('on');
 			}else{
@@ -47,8 +47,8 @@ $(function(){
             $duration = 500,
             $easing = 'easeInOutExpo',
             $arrowBox = $('.slide__wrap'),
-            $prevArrow = $arrowBox.find('.arrow--prevBtn'),
-            $nextArrow = $arrowBox.find('.arrow--nextBtn'),
+            $prevArrow = $arrowBox.find('.slider__arrow-btn--prev'),
+            $nextArrow = $arrowBox.find('.slider__arrow-btn--next'),
             $inDicatorBtn = $('.indicator__btn');
 
         var $pause = 0,

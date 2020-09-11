@@ -65,7 +65,7 @@
         <main>
             <div id="container">
                 <section>
-                    <div class="section banner" role="tabpanel" aria-labelledby="About__navTab"> <!-- 6. section--banner ▶ section -->
+                    <div class="section banner"> <!-- 6. section--banner ▶ banner -->
                         <div class="inner">
                             <div class="title">
                                 <strong>spa & beauty center</strong>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- //section-banner -->
+                </section><!-- //section--banner -->
 
                 <section>
                     <div class="section about"> <!--11. section--about ▶ about -->
@@ -107,7 +107,7 @@
                             </ul>
                         </div>
                     </div>
-                </section><!-- //section-Feature -->
+                </section><!-- //section--Feature -->
 
                 <section>
                     <div class="section service"><!-- 17. 'section--service ▶ service -->
@@ -119,7 +119,7 @@
                             <div class="tiles service__cont">
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="article_img--framed"><!-- 18. article_padding ▶ article_img--frame -->
+                                        <div class="article_img--frame"><!-- 18. article_padding ▶ article_img--frame -->
                                             <div class="article_img">
                                                 <img src="./images/Massage_02.jpg" alt=""><!-- alt값은 아래 h3 -->
                                             </div>
@@ -134,7 +134,7 @@
                                 </article>
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="article_img--framed">
+                                        <div class="article_img--frame">
                                             <div class="article_img">
                                                 <img src="./images/Massage_03.jpg">
                                             </div>
@@ -148,7 +148,7 @@
                                 </article>
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="article_img--framed">
+                                        <div class="article_img--frame">
                                             <div class="article_img">
                                                 <img src="./images/Massage_02.jpg">
                                             </div>
@@ -163,7 +163,7 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- //section-Service -->
+                </section><!-- //section--Service -->
 
                 <section>
                     <div class="section testimonials"><!-- jhe : 20. section--testimonials ▶ testimonials -->
@@ -216,34 +216,28 @@
 
                         <!-- indicator Btn list -->
                         <ul class="indicator"><!-- 26. slider__indicator--btn ▶ indicator -->
-                            <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li><!-- 27. 'indicator__btn ▶ indicator__btn -->
+                            <li class="indicator--play-pause">
+                                <button type="button" class="slide__play">
+                                    <span>play</span>
+                                </button>
+                            </li>
+                            <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li><!-- 27. 'indicator--btn ▶ indicator__btn -->
                             <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li>
                             <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li>
                             <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li>
-                        </ul>
-
-                        <!-- play_stop Btn list -->
-                        <ul class="slider__rolling--btn"><!-- 28. rolling--play 영역을 상단 indicator에 적용해 주시고 'slider__rolling--btn' 은 제거해 주세요. -->
-                            <li class="indicator--play-pause"><button type="button" class="slide__play play-pause"><span>play</span></button></li>
-                            <!--29. 'rolling--play ▶ indicator--play-pause / add,removeClass ▶ is-play, is-pause
-                                30. 'slide__play ▶ play-pause --->
-                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling1</span></button></li>
-                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling2</span></button></li>
-                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling3</span></button></li>
-                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling4</span></button></li>
                         </ul>
 
                         <!-- prev, next Btn -->
                         <div class="slider__arrow">
                             <div class="slider__arrow-inner">
                                 <!--  31. slider__arrow--inner ▶ slider__arrow-inner -->
-                                <a href="javascript:" role="button" class="arrow--prevBtn"><span>Prevbutton</span></a>
-                                <a href="javascript:" role="button" class="arrow--nextBtn"><span>NextButton</span></a>
-                                <!--  32. 'arrow--prevBtn ▶ slider__arrow-btn--prev / a태그를 버튼으로 사용 role="button" 명시-->
+                                <a href="javascript:" role="button" class="slider__arrow-btn--prev"><span>Prevbutton</span></a>
+                                <a href="javascript:" role="button" class="slider__arrow-btn--next"><span>NextButton</span></a>
+                                <!--  32. 'arrow--prevBtn ▶ slider__arrow-btn--prev / a 태그를 버튼으로 사용 role="button" 명시-->
                             </div>
                         </div>
                     </div>
-                </section><!-- //section-testimonials -->
+                </section><!-- //section--testimonials -->
 
                 <section>
                     <div class="section team"><!-- 33. section--team ▶ team-->
@@ -266,7 +260,9 @@
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
                                                 <ul>
-                                                    <!-- 35. role="tablist", role="tab"의 의미를 다시 생각해 주세요. 해당 sns 영역은 tab영역이 아니라고 생각됩니다. -->
+                                                    <!-- 35. role="tablist", role="tab"의 의미를 다시 생각해 주세요. 해당 sns 영역은 tab영역이 아니라고 생각됩니다.
+                                                        tablist부분은 다시 공부.
+                                                    -->
                                                     <li class="facebook"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
                                                     <li class="twitter"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
                                                     <li class="google"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
@@ -313,7 +309,7 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- //section-team -->
+                </section><!-- //section--team -->
 
                 <section>
                     <div class="section reserved"><!-- 36. section--reserved ▶ reserved -->
@@ -343,7 +339,7 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- // section-reserved -->
+                </section><!-- // section--reserved -->
 
                 <section>
                     <div class="section blog"><!--41. section--blog ▶ blog  -->
@@ -355,14 +351,13 @@
                             <div class="tiles blog__cont">
                                 <article>
                                     <div class="article__blog-tiles"> <!--42. article__blog--tiles  ▶ article__blog-tiles -->
-                                        <div class="article_img--framed">
-                                            <!-- 43. 'article_padding' 상단 공통 적용  article_img--framed -->
+                                        <div class="article_img--frame">
+                                            <!-- 43. 'article_padding' 상단 공통 적용  article_img--frame -->
                                             <div class="article_img">
                                                 <img src="./images/relaxation.jpg" alt="">
                                             </div>
                                             <div class="text-wrap">
-                                                <p class="blog__date"><span>RELAXATION</span>july 03, 2019</p>
-                                                <!--44. 'blog--date ▶ blog__date -->
+                                                <p class="blog__date"><span>RELAXATION</span>july 03, 2019</p><!--44. 'blog--date ▶ blog__date -->
                                                 <h3>Had seed herbgrass mids</h3>
                                                 <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
                                                 <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
@@ -372,7 +367,7 @@
                                 </article>
                                 <article>
                                     <div class="article__blog-tiles">
-                                        <div class="article_img--framed">
+                                        <div class="article_img--frame">
                                             <div class="article_img">
                                                 <img src="./images/relaxation.jpg" alt="">
                                             </div>
@@ -381,14 +376,14 @@
                                                 <h3>Had seed herbgrass mids</h3>
                                                 <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
                                                 <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
-                                                 <!-- 45. 'tiles__list--btn' 상단 공통 적용  -->
+                                                <!-- 45. 'tiles__list--btn' 상단 공통 적용  -->
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__blog-tiles">
-                                        <div class="article_img--framed">
+                                        <div class="article_img--frame">
                                             <div class="article_img">
                                                 <img src="./images/relaxation.jpg" alt="">
                                             </div>
@@ -440,7 +435,7 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- // contact -->
+                </section><!-- // section--contact -->
             </div>
         </main>
 
@@ -485,7 +480,6 @@
         </footer>
     </div>
 <script type="text/javascript" src="./js/script.js"></script>
-<!-- <script type="text/javascript" src="./js/script_swipe.js"></script> -->
 </body>
 </html>
 

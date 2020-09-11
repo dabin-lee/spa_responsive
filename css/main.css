@@ -80,39 +80,26 @@ header .nav ul li {margin-right: 5.805%;}
 .testimonials .testimonials__item .testimonials__name {display: inline-block; margin-top: 2.105%; font-size: 1rem; font-weight: 400; line-height: 2rem; color: #263a41;}
 .testimonials .testimonials__item .testimonials__name em {font-family: 'Rufina', serif; font-size: 1.466em; font-weight: 400;}
 
-.testimonials .indicator__Btn--wrap{position: absolute; top:620px;}
 
-
-.testimonials .indicator {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 85px; transform: translateX(-50%);}
-.testimonials .indicator li {overflow: hidden; position: relative; width: 10px; height: 10px;}
-.testimonials .indicator li button {position:absolute; width: 100%; height: 100%; background-color:#ffc3c2; border-radius: 50%; cursor: pointer;}
+.testimonials .indicator {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 10%; transform: translateX(-50%);}
+.testimonials .indicator .indicator__btn {overflow: hidden; position: relative; width: 10px; height: 10px;}
+.testimonials .indicator .indicator__btn button {position:absolute; width: 100%; height: 100%; background-color:#ffc3c2; border-radius: 50%; cursor: pointer;}
 .testimonials .indicator .indicator--on button {background-color: #ff817e; transition: .3s;}
+
+.testimonials .indicator .indicator--play-pause button {width: 10px; height:11px; background-image: url(../images/arrow_btn_.png); background-position-x: 42px; text-indent: -9999px;}
+.testimonials .indicator .is-pause button {background-position-x: 33px; background-color: transparent;}
 
 .testimonials .slider__arrow {display: flex; align-items: center; width:100%; height:100%;}
 .testimonials .slider__arrow-inner {width: 63.058%; margin: 0 auto; z-index: 9999;}
 .testimonials .slider__arrow a {display: inline-block; width: 25px; height: 46px; text-indent: -9999px; background-image: url(../images/arrow_btn_.png); background-size: cover; cursor:pointer;}
-.testimonials .slider__arrow .arrow--prevBtn {float: left;}
-.testimonials .slider__arrow .arrow--nextBtn {float: right; background-position-x: 65px;}
-
-
-.testimonials .slider__rolling--btn {position: absolute; bottom: 100px; left: 50%; transform: translateX(-43%);}
-.testimonials .slider__rolling--btn li {float:left; margin-right:15px; width: 13px; height: 13px;}
-.testimonials .slider__rolling--btn li:last-child {margin-right:none;}
-
-.testimonials .slider__rolling--btn li button {position:absolute; width: 8px; height: 8px; cursor: pointer; text-indent: -9999px;}
-.testimonials .slider__rolling--btn .rolling--btn button {background-color: transparent; border: 1px solid #999; border-radius: 50%;}
-.testimonials .slider__rolling--btn .is-play .rollingBtn {border: none; background-color: #999; transition: .3s;}
-
-.testimonials .slider__rolling--btn .indicator--play-pause {width: 10px;}
-.testimonials .slider__rolling--btn .indicator--play-pause button {width: 10px; height:11px; background-image: url(../images/arrow_btn_.png); background-position-x: 42px;}
-.testimonials .slider__rolling--btn .is-pause button {background-position-x: 33px; background-color: transparent;}
+.testimonials .slider__arrow .slider__arrow-btn--prev {float: left;}
+.testimonials .slider__arrow .slider__arrow-btn--next {float: right; background-position-x: 65px;}
 
 
 /* 6. team */
 .team .team__cont .team__manager {position: relative; width: 31.578%;}
 .team .team__cont .team__manager figure {width: 100%; height: 434px; background: #f1f1f1;} /*height: js*/
 .team .team__cont .team__manager figcaption {overflow:hidden; position: absolute; bottom:-16.8%; width: calc(100% - 60px); margin: 0 30px; background: #fff; transition: ease-in .3s;}
-/* .team .team__cont .team__manager figcaption h3 {margin-top: 9.333%; font-size: 1.466em; font-weight: 700; line-height: 1.65em;} */
 .team .team__cont .team__manager figcaption p {line-height: 1.642em;}
 
 .team .team__cont figcaption .btn__sns {opacity: 0;}
@@ -174,7 +161,7 @@ header .nav ul li {margin-right: 5.805%;}
 .blog .tiles article {height: auto;}
 .blog article .article_img { padding-top: 100%;}
 /* .blog .article__blog-tiles{height: 100%; box-sizing: border-box;} */
-/* .blog .article_img--framed {height:100%; padding: 5.55%; box-sizing: border-box;} */
+/* .blog .article_img--frame {height:100%; padding: 5.55%; box-sizing: border-box;} */
 .blog .article__blog-tiles .text-wrap .blog__date {margin-top: 11.00%; line-height: 1em;}
 .blog .article__blog-tiles .text-wrap .blog__date span {font-size: 0.857em; color: #777;}
 .blog .article__blog-tiles .text-wrap .blog__date span::after {display: inline-block; width: 1px; height: 10px; margin: 0 11px; background: #777; content: '';}

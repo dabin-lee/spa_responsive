@@ -48,7 +48,7 @@ section > div { position: relative;}
 .tiles article:hover .btn__primary { transition: .3s; background: #ff817e;}
 
     /*  tiles - imgbox */
-    .tiles article .article_img--framed {height:100%; padding: 5.55%; box-sizing: border-box;}
+    .tiles article .article_img--frame {height:100%; padding: 5.55%; box-sizing: border-box;}
     .tiles article .article_img { position: relative; padding-top: 85%;box-sizing: border-box;}
     .tiles article .article_img img {position: absolute; top: 0; left: 0;}
 
