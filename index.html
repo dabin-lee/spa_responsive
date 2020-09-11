@@ -14,13 +14,15 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" media="(max-width: 1140px)" href="./css/main_pad.css">
     <link rel="stylesheet" media="(max-width: 767px)" href="./css/main_mobile.css">
-
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
@@ -40,30 +42,30 @@
                 <h1 class="header__logo"><a href="#"><img src="./images/header_logo.png" alt="spa-Massage"></a></h1>
                 <div class="nav">
                     <nav>
-                        <div class="gnb-menu__bar" role="tablist">
-                            <span class="menu--bar"></span>
-                            <span class="menu--bar"></span>
-                            <span class="menu--bar"></span>
-                        </div>
-                        <ul id="gnb" class="nav__bar navbar--on" >
-                            <li role="tab"><a href="#">HOME</a></li>
-                            <li role="tab"><a href="#">ABOUT</a></li>
-                            <li role="tab"><a href="#">FEATURE</a></li>
-                            <li role="tab"><a href="#">SERVICE</a></li>
-                            <li role="tab"><a href="#">CONTACT</a></li>
+                        <button class="gnb__button"><!-- 1. tablist 삭제 / 2. 시맨틱마크업 button 태그 변경 / 3. element__modifiy -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul id="gnb" class="nav__bar nav__bar--on"><!-- 4. block__element--modifiy -->
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">FEATURE</a></li>
+                            <li><a href="#">SERVICE</a></li>
+                            <li><a href="#">CONTACT</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="header_bg">
-                <img src="./images/bg_02.png" alt="pink">
+                <img src="./images/bg_02.png" alt=""><!-- 5. 의미없는 이미지는 alt 공백 -->
             </div>
         </header>
 
         <main>
             <div id="container">
                 <section>
-                    <div class="section section--banner">
+                    <div class="section banner" role="tabpanel" aria-labelledby="About__navTab"> <!-- 6. section--banner ▶ section -->
                         <div class="inner">
                             <div class="title">
                                 <strong>spa & beauty center</strong>
@@ -71,23 +73,18 @@
                                 <p>Together creeping heaven upon third dominion be upon won't darkness rule</p>
                                 <p>behold it createdgood saw after she'd Our set living.</p>
                             </div>
-                            <div class="banner__btn">
-                                <button type="submit" class="btn--submit"><span><em>RESERVED NOW</em></span></button>
-                                <a href="#" class="banner__summary--play">
-                                    <div class="btn--play">
-                                        <div class="playbtn_img">
-                                            <img src="./images/arrow_btn_.png" alt="playbutton">
-                                        </div>
-                                    </div>
-                                    <span class="btn__play--tit">Watch our story</span>
+                            <div class="banner__btn"> <!-- 7. banner--submit ▶ banner__btn-submit -->
+                                <button type="submit" class="banner__btn-submit"><span><em>RESERVED NOW</em></span></button>
+                                <a href="#" class="banner__btn-play"> <!-- 8. banner__summary--play ▶ banner__btn-play -->
+                                    <span class="banner__btn-play-tit">Watch our story</span><!--10. btn__play--tit ▶ banner__btn-play-tit  -->
                                 </a>
                             </div>
                         </div>
                     </div>
-                </section><!-- //banner -->
+                </section><!-- //section-banner -->
 
                 <section>
-                    <div class="section section--about">
+                    <div class="section about"> <!--11. section--about ▶ about -->
                         <div class="inner">
                             <div class="title butterfly">
                                 <span>About our spa center</span>
@@ -100,28 +97,20 @@
                 </section><!-- //About -->
 
                 <section>
-                    <div class="section section--feature">
-                        <!-- <div class="inner"> -->
-                            <div class="feature--inner feature__cont">
-                                <div class="feature__mo">
-                                    <ul>
-                                        <li class="swipe0 feature__block"><div><span>Body Treatment</span></div></li>
-                                        <li class="swipe1"><div><span>Body Treatment</span></div></li>
-                                        <li class="swipe2"><div><span>Body Treatment</span></div></li>
-                                        <li class="swipe3"><div><span>Body Treatment</span></div></li>
-                                        <li class="swipe swipe0">1<div><span>Body Treatment</span></div></li>
-                                        <li class="swipe swipe1">2<div><span>Body Treatment</span></div></li>
-                                        <li class="swipe swipe2">3<div><span>Body Treatment</span></div></li>
-                                        <li class="swipe swipe3">4<div><span>Body Treatment</span></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        <!-- </div> -->
+                    <div class="section feature"> <!--12. section--feature ▶ feature -->
+                        <div class="feature__cont swiper-container"><!--13. feature__inner / 14. ul 클래스명 -->
+                            <ul class="swiper-wrapper">
+                                <li class="swipe0 swiper-slide"><div><span>Body Treatment</span></div></li>
+                                <li class="swipe1 swiper-slide"><div><span>Body Treatment</span></div></li>
+                                <li class="swipe2 swiper-slide"><div><span>Body Treatment</span></div></li>
+                                <li class="swipe3 swiper-slide"><div><span>Body Treatment</span></div></li>
+                            </ul>
+                        </div>
                     </div>
-                </section><!-- //Feature -->
+                </section><!-- //section-Feature -->
 
                 <section>
-                    <div class="section section--service">
+                    <div class="section service"><!-- 17. 'section--service ▶ service -->
                         <div class="inner">
                             <div class="title">
                                 <h2>Popular Procedures</h2>
@@ -130,43 +119,43 @@
                             <div class="tiles service__cont">
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="article_padding">
-                                            <div class="summary--img">
-                                                <img src="./images/Massage_02.jpg" alt="">
-                                                <!-- alt값은 아래 h3 -->
+                                        <div class="article_img--framed"><!-- 18. article_padding ▶ article_img--frame -->
+                                            <div class="article_img">
+                                                <img src="./images/Massage_02.jpg" alt=""><!-- alt값은 아래 h3 -->
                                             </div>
                                             <div class="text-wrap">
                                                 <h3>Massage Therapy</h3>
                                                 <p>Living winged said you darkness you're divide</p><p>gathered and bring one seasons facegreat dr</p><p>Waters firmament place which.</p>
-                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                                <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
+                                                <!-- 19. tiles__list--btn ▶ tiles__btn-list -->
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="article_padding">
-                                            <div class="summary--img">
+                                        <div class="article_img--framed">
+                                            <div class="article_img">
                                                 <img src="./images/Massage_03.jpg">
                                             </div>
                                             <div class="text-wrap">
                                                 <h3>Massage Therapy</h3>
                                                 <p>Living winged said you darkness you're divide</p><p>gathered and bring one seasons facegreat dr</p><p>Waters firmament place which.</p>
-                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                                <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 <article>
                                     <div class="article__service-tiles">
-                                        <div class="article_padding">
-                                            <div class="summary--img">
+                                        <div class="article_img--framed">
+                                            <div class="article_img">
                                                 <img src="./images/Massage_02.jpg">
                                             </div>
                                             <div class="text-wrap">
                                                 <h3>Massage Therapy</h3>
                                                 <p>Living winged said you darkness you're divide</p><p>gathered and bring one seasons facegreat dr</p><p>Waters firmament place which.</p>
-                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                                <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -174,68 +163,70 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- //Service -->
+                </section><!-- //section-Service -->
 
                 <section>
-                    <div class="section section--testimonials">
-                        <div class="article__group--testimonials">
-                            <div class="indicator--article">
-                                <div class="inner indicator--item">
+                    <div class="section testimonials"><!-- jhe : 20. section--testimonials ▶ testimonials -->
+                        <div class="testimonials__cont"><!-- 21. article__group--testimonials ▶ testimonials__cont  -->
+                            <div class="article__testimonials"><!-- 22. indicator--article ▶ article__testimonials -->
+                                <div class="inner testimonials__item"><!-- 23. indicator--item ▶ testimonials__item -->
                                     <p>
                                     First i beast be fruitful open you tree all Won't can't likeness and you're have whales creature seed to twograss life blessed you
                                     meat shall you winged u nder from their there he That you're one calledgather make much red wherein set fourthgreen bearing
                                     fifth replenishgiven she had.
                                     </p>
-                                    <div class="executive--photo"></div>
-                                    <span class="executive--name"><em>Jack Marsh,</em>&nbsp; Executive</span>
+                                    <div class="testimonials__photo"></div><!-- 24. 'executive--photo ▶ testimonials__photo -->
+                                    <span class="testimonials__name"><em>Jack Marsh,</em>&nbsp; Executive</span><!-- 25. executive--name ▶ testimonials__name -->
                                 </div>
                             </div>
-                            <div class="indicator--article">
-                                <div class="inner indicator--item">
+                            <div class="article__testimonials">
+                                <div class="inner testimonials__item">
                                     <p>
                                     First i beast be fruitful open you tree all Won't can't likeness and you're have whales creature seed to twograss life blessed you
                                     meat shall you winged under from their there he That you're one calledgather make much red wherein set fourthgreen bearing
                                     fifth replenishgiven she had.
                                     </p>
-                                    <div class="executive--photo"></div>
-                                    <span class="executive--name"><em>Jack Marsh,</em> &nbsp;Executive</span>
+                                    <div class="testimonials__photo"></div>
+                                    <span class="testimonials__name"><em>Jack Marsh,</em> &nbsp;Executive</span>
                                 </div>
                             </div>
-                            <div class="indicator--article">
-                                <div class="inner indicator--item">
+                            <div class="article__testimonials">
+                                <div class="inner testimonials__item">
                                     <p>
                                     First i beast be fruitful open you tree all Won't can't likeness and you're have whales creature seed to twograss life blessed you
                                     meat shall you winged under from their there he That you're one calledgather make much red wherein set fourthgreen bearing
                                     fifth replenishgiven she had.
                                     </p>
-                                    <div class="executive--photo"></div>
-                                    <span class="executive--name"><em>Jack Marsh,</em> &nbsp;Executive</span>
+                                    <div class="testimonials__photo"></div>
+                                    <span class="testimonials__name"><em>Jack Marsh,</em> &nbsp;Executive</span>
                                 </div>
                             </div>
-                            <div class="indicator--article">
-                                <div class="inner indicator--item">
+                            <div class="article__testimonials">
+                                <div class="inner testimonials__item">
                                     <p>
                                     First i beast be fruitful open you tree all Won't can't likeness and you're have whales creature seed to twograss life blessed you
                                     meat shall you winged under from their there he That you're one calledgather make much red wherein set fourthgreen bearing
                                     fifth replenishgiven she had.
                                     </p>
-                                    <div class="executive--photo"></div>
-                                    <span class="executive--name"><em>Jack Marsh,</em> &nbsp;Executive</span>
+                                    <div class="testimonials__photo"></div>
+                                    <span class="testimonials__name"><em>Jack Marsh,</em> &nbsp;Executive</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- indicator Btn list -->
-                        <ul class="slider__indicator--btn">
-                            <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
-                            <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
-                            <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
-                            <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
+                        <ul class="indicator"><!-- 26. slider__indicator--btn ▶ indicator -->
+                            <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li><!-- 27. 'indicator__btn ▶ indicator__btn -->
+                            <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li>
+                            <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li>
+                            <li class="indicator__btn"><button type="button"><span>pagebutton</span></button></li>
                         </ul>
 
                         <!-- play_stop Btn list -->
-                        <ul class="slider__rolling--btn">
-                            <li class="rolling--play"><button type="button" class="slide__play"><span>play</span></button></li>
+                        <ul class="slider__rolling--btn"><!-- 28. rolling--play 영역을 상단 indicator에 적용해 주시고 'slider__rolling--btn' 은 제거해 주세요. -->
+                            <li class="indicator--play-pause"><button type="button" class="slide__play play-pause"><span>play</span></button></li>
+                            <!--29. 'rolling--play ▶ indicator--play-pause / add,removeClass ▶ is-play, is-pause
+                                30. 'slide__play ▶ play-pause --->
                             <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling1</span></button></li>
                             <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling2</span></button></li>
                             <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling3</span></button></li>
@@ -244,20 +235,18 @@
 
                         <!-- prev, next Btn -->
                         <div class="slider__arrow">
-                            <div class="slide__wrap slider__arrow--inner">
-
+                            <div class="slider__arrow-inner">
+                                <!--  31. slider__arrow--inner ▶ slider__arrow-inner -->
                                 <a href="javascript:" role="button" class="arrow--prevBtn"><span>Prevbutton</span></a>
                                 <a href="javascript:" role="button" class="arrow--nextBtn"><span>NextButton</span></a>
-
-                                <!-- <button type="button" class="arrow--prevBtn"><span>Prevbutton</span></button>
-                                <button type="button" class="arrow--nextBtn"><span>NextButton</span></button> -->
+                                <!--  32. 'arrow--prevBtn ▶ slider__arrow-btn--prev / a태그를 버튼으로 사용 role="button" 명시-->
                             </div>
                         </div>
                     </div>
-                </section><!-- //testimonials -->
+                </section><!-- //section-testimonials -->
 
                 <section>
-                    <div class="section section--team">
+                    <div class="section team"><!-- 33. section--team ▶ team-->
                         <div class="inner">
                             <div class="title">
                                 <h2>Experienced Team</h2>
@@ -265,7 +254,10 @@
                             </div>
                             <div class="team__cont">
                                 <ul class="tiles">
-                                    <li class="manager--profile" tabindex="0">
+                                    <li class="team__manager" tabindex="0">
+                                        <!-- 34. 'manager--profile ▶ team(블록)__manager(엘리먼트)
+                                        a 태그가 있어 포커스를 받긴 하지만 li에 초점이 가야 sns 영역의 초점이 정상적으로 보이므로 해당 영역은 다빈씨 마크업대로 tabindex="0" 유지하면 될 것 같습니다.
+                                        -->
                                         <figure>
                                             <img src="" alt="">
                                         </figure>
@@ -273,16 +265,17 @@
                                             <h3>Joseph Austin</h3>
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
-                                                <ul class="tablist" role="tablist">
-                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
-                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
-                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
-                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="_blank" title="새 창"><span>instagram</span></a></li>
+                                                <ul>
+                                                    <!-- 35. role="tablist", role="tab"의 의미를 다시 생각해 주세요. 해당 sns 영역은 tab영역이 아니라고 생각됩니다. -->
+                                                    <li class="facebook"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
+                                                    <li class="twitter"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
+                                                    <li class="google"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
+                                                    <li class="instagram off"><a href="https://www.instagram.com" role="button" target="_blank" title="새 창"><span>instagram</span></a></li>
                                                 </ul>
                                             </div>
                                         </figcaption>
                                     </li>
-                                    <li class="manager--profile" tabindex="0">
+                                    <li class="team__manager" tabindex="0">
                                         <figure>
                                             <img src="" alt="">
                                         </figure>
@@ -290,16 +283,16 @@
                                             <h3>Dabin Hannan</h3>
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
-                                                <ul class="tablist" role="tablist">
-                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
-                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
-                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
-                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="_blank" title="새 창"><span>instagram</span></a></li>
+                                                <ul>
+                                                    <li class="facebook"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
+                                                    <li class="twitter"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
+                                                    <li class="google"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
+                                                    <li class="instagram off"><a href="https://www.instagram.com" role="button" target="_blank" title="새 창"><span>instagram</span></a></li>
                                                 </ul>
                                             </div>
                                         </figcaption>
                                     </li>
-                                    <li class="manager--profile" tabindex="0">
+                                    <li class="team__manager" tabindex="0">
                                         <figure>
                                             <img src="" alt="">
                                         </figure>
@@ -307,11 +300,11 @@
                                             <h3>Cheryl Harris</h3>
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
-                                                <ul class="tablist" role="tablist">
-                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
-                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
-                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
-                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="_blank" title="새 창"><span>instagram</span></a></li>
+                                                <ul>
+                                                    <li class="facebook"><a href="https://www.facebook.com" role="button" target="_blank" title="새 창"><span>facebook</span></a></li>
+                                                    <li class="twitter"><a href="https://www.twitter.com" role="button" target="_blank" title="새 창"><span>twitter</span></a></li>
+                                                    <li class="google"><a href="https://www.google.com" role="button" target="_blank" title="새 창"><span>google</span></a></li>
+                                                    <li class="instagram off"><a href="https://www.instagram.com" role="button" target="_blank" title="새 창"><span>instagram</span></a></li>
                                                 </ul>
                                             </div>
                                         </figcaption>
@@ -320,11 +313,12 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- //Team -->
+                </section><!-- //section-team -->
 
                 <section>
-                    <div class="section section--reserved">
-                        <div class="reserved--wrap inner">
+                    <div class="section reserved"><!-- 36. section--reserved ▶ reserved -->
+                        <div class="reserved__wrap inner">
+                            <!-- 37. reserved--wrap ▶ reserved__wrap -->
                             <div class="reserved__thumbnail">
                                 <img src="./images/reserve.jpg" alt="reserve">
                             </div>
@@ -340,19 +334,19 @@
                                     </select>
 
                                     <input type="text" title="PHONE NUMBER" value="" placeholder="PHONE NUMBER">
-                                    <input type="text" id="reserveDate" class="reseve--date" placeholder="DATE">
-                                    <input type="text" id="timePicker" class="reseve--time" placeholder="TIME">
-                                    <input type="text" class="form--note" title="YOUR NOTE" value="" size="50" placeholder="YOUR NOTE">
+                                    <input type="text" id="reserveDate" class="reseve__date" placeholder="DATE"><!--38. reseve--date ▶ reseve__date  -->
+                                    <input type="text" id="timePicker" class="reseve__time" placeholder="TIME"><!-- 39. reseve--time ▶ reseve__time  -->
+                                    <input type="text" class="form__note" title="YOUR NOTE" value="" size="50" placeholder="YOUR NOTE"><!-- 40. form--note ▶form--note  -->
 
                                     <button type="submit" class="btn__primary--pink"><span>Make an Appointment</span></button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                </section><!-- // section--reserved -->
+                </section><!-- // section-reserved -->
 
                 <section>
-                    <div class="section section--blog">
+                    <div class="section blog"><!--41. section--blog ▶ blog  -->
                         <div class="inner">
                             <div class="title">
                                 <h2>Latest From Blog</h2>
@@ -360,46 +354,49 @@
                             </div>
                             <div class="tiles blog__cont">
                                 <article>
-                                    <div class="article__blog--tiles">
-                                        <div class="article_padding">
-                                            <div class="summary--img">
+                                    <div class="article__blog-tiles"> <!--42. article__blog--tiles  ▶ article__blog-tiles -->
+                                        <div class="article_img--framed">
+                                            <!-- 43. 'article_padding' 상단 공통 적용  article_img--framed -->
+                                            <div class="article_img">
                                                 <img src="./images/relaxation.jpg" alt="">
                                             </div>
                                             <div class="text-wrap">
-                                                <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <p class="blog__date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <!--44. 'blog--date ▶ blog__date -->
                                                 <h3>Had seed herbgrass mids</h3>
                                                 <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                                <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 <article>
-                                    <div class="article__blog--tiles">
-                                        <div class="article_padding">
-                                            <div class="summary--img">
+                                    <div class="article__blog-tiles">
+                                        <div class="article_img--framed">
+                                            <div class="article_img">
                                                 <img src="./images/relaxation.jpg" alt="">
                                             </div>
                                             <div class="text-wrap">
-                                                <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <p class="blog__date"><span>RELAXATION</span>july 03, 2019</p>
                                                 <h3>Had seed herbgrass mids</h3>
                                                 <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                                <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
+                                                 <!-- 45. 'tiles__list--btn' 상단 공통 적용  -->
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 <article>
-                                    <div class="article__blog--tiles">
-                                        <div class="article_padding">
-                                            <div class="summary--img">
+                                    <div class="article__blog-tiles">
+                                        <div class="article_img--framed">
+                                            <div class="article_img">
                                                 <img src="./images/relaxation.jpg" alt="">
                                             </div>
                                             <div class="text-wrap">
-                                                <p class="blog--date"><span>RELAXATION</span>july 03, 2019</p>
+                                                <p class="blog__date"><span>RELAXATION</span>july 03, 2019</p>
                                                 <h3>Had seed herbgrass mids</h3>
                                                 <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                                                <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
+                                                <button type="button" class="btn__primary tiles__btn-list"><span>READ MORE</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -407,17 +404,17 @@
                             </div>
                         </div>
                     </div>
-                </section><!-- //blog -->
+                </section><!-- //section--blog -->
 
                 <section>
-                    <div class="section section--contact">
+                    <div class="section contact"><!--46. section--contact ▶ contact  -->
                         <div class="inner">
                             <div class="title">
                                 <h2>Get In Touch</h2>
                                 <p>To doesn't his appear replenish together called he of mad place won't wherein blessed second every <br> wherein were meat kind wherein and martcin</p>
                             </div>
                             <div class="contact__cont">
-                                <ul class="visit--info">
+                                <ul class="contact__info"><!-- 47. 'visit--info ▶ contact(블록)__info(엘리먼트)' -->
                                     <li>
                                         <h3>
                                             <span>address</span>
@@ -433,7 +430,8 @@
                                         <p>+02 365 2365 3265 (02) <br> +01 365 2365 3265 (04) </p>
                                     </li>
                                 </ul>
-                                <form method="POST" action="" class="visit--form">
+                                <form method="POST" action="" class="contact__form">
+                                    <!-- 48. 'visit--form ▶ contact(블록)__form(엘리먼트)' -->
                                     <input type="text" id="input-07" title="FIRST NAME" value="" placeholder="FIRST NAME">
                                     <input type="email" id="input-08" title="EMAIL ADDRESS" value="" placeholder="EMAIL ADDRESS">
                                     <input type="text" class="input--board" id="input-09" title="WRITE COMMENT" value="" placeholder="WRITE COMMENT">
@@ -461,20 +459,20 @@
                             <li><a href="#">CONTACT</a></li>
                         </ul>
                     </div>
-                    <div class="footer__list--sns">
-                        <ul class="footer--sns__type01">
+                    <div class="footer__sns"> <!-- jhe : 48. 'footer__list--sns' 는 => 'footer(블록)__sns(엘리먼트)' -->
+                        <ul class="footer__sns--type01">
                             <li class="facebook"><a href="https://www.facebook.com" target="_blank" title="새 창">facebook</a></li>
                             <li class="twitter"><a href="https://www.twitter.com" target="_blank" title="새 창">twitter</a></li>
                             <li class="instagram"><a href="https://www.instagram.com" target="_blank" title="새 창">instagram</a></li>
                             <li class="vingle"><a href="https://careers.vingle.net" target="_blank" title="새 창">vingle</a></li>
                         </ul>
-                        <ul class="footer--sns__type02">
+                        <ul class="footer__sns--type02">
                             <li class="facebook"><a href="https://www.facebook.com" target="_blank" title="새 창">facebook</a></li>
                             <li class="twitter"><a href="https://www.twitter.com" target="_blank" title="새 창">twitter</a></li>
                             <li class="instagram"><a href="https://www.instagram.com" target="_blank" title="새 창">instagram</a></li>
                             <li class="vingle"><a href="https://careers.vingle.net" target="_blank" title="새 창">vingle</a></li>
                         </ul>
-                        <ul class="footer--sns__type03">
+                        <ul class="footer__sns--type03">
                             <li class="facebook"><a href="https://www.facebook.com" target="_blank" title="새 창">facebook</a></li>
                             <li class="twitter"><a href="https://www.twitter.com" target="_blank" title="새 창">twitter</a></li>
                             <li class="instagram"><a href="https://www.instagram.com" target="_blank" title="새 창">instagram</a></li>
@@ -487,7 +485,7 @@
         </footer>
     </div>
 <script type="text/javascript" src="./js/script.js"></script>
-<!-- <script type="text/javascript" src="./js/script_responsive.js"></script> -->
+<!-- <script type="text/javascript" src="./js/script_swipe.js"></script> -->
 </body>
 </html>
 

@@ -21,19 +21,15 @@ section > div { position: relative;}
 
 /* COOMON-title */
 .title h2 {  margin-top:11.403%; font-family: 'Rufina', serif; font-weight: 700; font-size: 2.8em; line-height: 1.35em; color:#263a41;}
-.title span {  font-size: 1em; font-weight: 500; letter-spacing: 2px; color:#888; text-transform: uppercase;}
-.title p {  font-size: 1em; line-height: 1.6em; color:#9b9b9b; font-weight: 300;}
+.title span {  font-size: 1rem; font-weight: 500; letter-spacing: 2px; color:#888; text-transform: uppercase;}
+.title p { font-size: 1rem; line-height: 1.6em; color:#9b9b9b; font-weight: 300;}
 .title h2 + p {  margin-top: 1.578%;}
 .title + button {margin-top: 6.491em;}
 
 
 /* COMMON - button */
-/* .btn__primary, .btn__primary--pink { display: block; width: 170px; height: 50px; margin: 0 auto; border: none; border-radius: 25px; background: #ff817e; color: #fff; text-align: center; cursor: pointer; outline: none; box-sizing: border-box;} */
 .btn__primary, .btn__primary--pink { display: block; width: 170px; height: 50px; margin: 0 auto; border: none; border-radius: 25px; background: #ff817e; color: #fff; text-align: center; cursor: pointer; outline: none; box-sizing: border-box;}
 
-
-/* COMMON - tiles_button */
-.tiles__list--btn { width: 53.45%; height: 50px;}
 
 
 /* btn - hover */
@@ -51,18 +47,25 @@ section > div { position: relative;}
 .tiles article:hover { box-shadow: 0 0 20px rgba(0,0,0,.2);}
 .tiles article:hover .btn__primary { transition: .3s; background: #ff817e;}
 
-.tiles article .summary--img img { max-width: 100%; box-sizing: border-box;}
+    /*  tiles - imgbox */
+    .tiles article .article_img--framed {height:100%; padding: 5.55%; box-sizing: border-box;}
+    .tiles article .article_img { position: relative; padding-top: 85%;box-sizing: border-box;}
+    .tiles article .article_img img {position: absolute; top: 0; left: 0;}
 
-.tiles article h3,.tiles figcaption h3 { display:inline-block; font-family: 'Rufina', serif; font-size:22px; font-weight: 700; line-height: 2em;}
-.tiles article p { font-size: 14px; line-height: 2em; color:#999;}
-.tiles figcaption p { font-size: 15px; color:#777;}
-.tiles article button { margin-top: 8.3333%;}
-.tiles figcaption h3 { margin-top: 28px;}
-.tiles img { width:100%; height:100%; object-fit: cover;}
+    /* tiles - text-wrap */
+    .tiles article h3, .tiles figcaption h3 { display:inline-block; font-family: 'Rufina', serif; font-size:22px; font-weight: 700; line-height: 2em;}
+    .tiles article p { font-size: 0.9333em; line-height: 1.75em; color: #999;}
+    .tiles figcaption p { font-size: 15px; color:#777;}
+    .tiles figcaption h3 { margin-top: 28px;}
 
+    /* tiles - button */
+    .tiles__btn-list { width: 53.45%; height: 50px; margin-top: 8.3333%;}
+    .tiles img { width:100%; height:100%; object-fit: cover;}
 
 
 /* nav - hover */
 .nav__bar{display:flex;}
 .nav__bar li a { display: block; font-weight: 500; font-size: 0.93em; line-height: 1.45em; color:#263a41;}
 .nav__bar li:hover a { color: #ff817e; transition: .3s;}
+
+

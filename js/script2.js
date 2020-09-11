@@ -10,7 +10,7 @@ $(function(){
             mouseenter:	function(){
                 $(this).addClass('on');
                 $Tab.focus()
-                $tabList.find('li').eq().attr('tabIndex', 0);
+                $tabList.find('li').eq().attr('tabIndexecutive--name', 0);
             },
             focus:	function(){  //키보드접근 focusin == focus    커보드 떠날 때 focusout == blur
                 $(this).addClass('on');
@@ -237,6 +237,10 @@ $(function(){
             //반응형
             breakpointsInverse: false,
             breakpoints: {
+                1530: {
+                    spaceBetween: 0,
+                    allowTouchMove: false,
+                },
                 768:{
                     spaceBetween: 0,
                     allowTouchMove: false,
@@ -269,6 +273,13 @@ $(function(){
                     $('.reserved__cont > form > .btn__primary--pink').height( 200 * 0.25 );
                 }
 
+            // 8. section--blog
+            // var secBlog = $('.blog__cont > article').width(),
+            //     BlogImgW = $('.article__blog-tiles .article_img').width();
+
+            //     $('.blog__cont > .article__blog-tiles').height( secBlog * 0.981);
+            //     $('.article__blog-tiles .article_img').height( BlogImgW * 0.981);
+
             // 9. section--contact
             var visitInputW = $('.contact__form > input').width();
                 $('.contact__form .input--board').css({height: visitInputW * 0.2707 });
@@ -285,13 +296,16 @@ $(function(){
                 btnPrimary.height( btnW2 *0.2941 );
                 btnPrimary.height( btnW2 *0.2941 );
 
-            //common - tiles
+             //common - tiles
             $('.tiles__btn-list').height( $('.tiles__btn-list').width() * 0.2941 );
 
-            if( winW <= 767 ){
-                $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
-                $('.banner__btn-play').height('50px');
-            };
+
+        if( winW <= 767 ){
+            $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
+            // $('.article__blog-tiles button.btn__primary').height( secBlog * 0.316);}
+            $('.banner__btn-play').height('50px');
+            // $('.testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2.5});
+        };
 
         });
     }); //반응형
