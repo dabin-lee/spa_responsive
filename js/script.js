@@ -46,7 +46,7 @@ $(function(){
             $slides = $slideGroup.find('> .article__testimonials'),
             $duration = 500,
             $easing = 'easeInOutExpo',
-            $arrowBox = $('.slide__wrap'),
+            $arrowBox = $('.slider__arrow-inner'),
             $prevArrow = $arrowBox.find('.slider__arrow-btn--prev'),
             $nextArrow = $arrowBox.find('.slider__arrow-btn--next'),
             $inDicatorBtn = $('.indicator__btn');
@@ -114,11 +114,13 @@ $(function(){
             }
             $prevArrow.on({
                 click : function(){
+                    console.log('pre');
                     prevSlide();
                 }
             })
             $nextArrow.on({
                 click : function(){
+                    console.log('nex');
                     nextSlide();
                 }
             })
@@ -253,12 +255,12 @@ $(function(){
         });
 
             // 6. team
-            var memBersnsBtn = $('.on .btn__sns > ul').width();
-                $('.on .btn__sns > ul').height( memBersnsBtn * 0.19 );
+            // var memBersnsBtn = $('.on .btn__sns > ul').width();
+            //     $('.on .btn__sns > ul').height( memBersnsBtn * 0.19 );
 
                 // 9. section--contact
-            var visitInputW = $('.contact__form > input').width();
-                $('.contact__form .input--board').css({height: visitInputW * 0.2707 });
+            // var visitInputW = $('.contact__form > input').width();
+            //     $('.contact__form .input--board').css({height: visitInputW * 0.2707 });
 
             // 10. footer .footer__logo
             var footerLogoW =  $('.footer__logo').width();
@@ -275,10 +277,10 @@ $(function(){
             //common - tiles
             $('.tiles__btn-list').height( $('.tiles__btn-list').width() * 0.2941 );
 
-            if( winW <= 767 ){
-                $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
-                $('.banner__btn-play').height('50px');
-            };
+            // if( winW <= 767 ){
+            //     $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
+            //     $('.banner__btn-play').height('50px');
+            // };
 
         });
     }); //반응형
