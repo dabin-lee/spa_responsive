@@ -223,23 +223,23 @@ $(function(){
         }
     }
 
-    // swipe
-    var swiper = new Swiper('.swiper-container', {
-        spaceBetween: 5, //슬라이드 간격
-        allowTouchMove: false,
-        loop: false,
-        slidesPerView: 4, //동시에 보여줄 슬라이드 개수
-        slidesPerGroup : 4, //그룹으로 묶을 수
-        initialSlide:1,
-        breakpoints: {
-            767: {
-                allowTouchMove : true, //드래그 방지
-                loop: true, // 무한 반복
-                slidesPerView: 1.45, //동시에 보여줄 슬라이드 개수
-                slidesPerGroup : 1.45, //그룹으로 묶을 수
+    // $(window).resize(function(){
+    if( $(window).innerWidth() >=  767 ){
+
+
+        var featureWrapW = $('.feature .feature__cont > ul > li').width();
+            $('.feature .feature__cont > ul > li').height( featureWrapW * 1.2);
+
+
+        var swiper = new Swiper('.swiper-container', {
+                spaceBetween: 5,
+                slidesPerView: 1.45,
                 initialSlide:1.2,
-                centeredSlides: true //가운데 정렬
-            },
+                loop: true,
+                centeredSlides: true,
+                allowTouchMove: true,
+            });
         }
-    })
+
+    // });
 });

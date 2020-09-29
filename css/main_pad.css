@@ -1,74 +1,70 @@
-/*: untill 768~1140  */
+/*: untill 768~1139  */
 
-@media ( max-width: 1140px ) {
+@media ( max-width: 1139px ) {
     .body__wrapper {min-width: 0; overflow: hidden;}
 
     /* common */
     .section .title {text-align: center;}
+    header .inner, section .inner {margin: 0;}
+
+    .title p{line-height: 1.8em;}
+    .title h2 + p{margin-top: 16px;}
 
     /* common - tiles */
+    .tiles article {text-align: center;}
+    .tiles .text-wrap .btn__primary span { font-size: .86rem;}
+
 
     /* header */
-    header .inner {max-width: none;}
+    header .inner {max-width: 1139px; padding: 20px 0 0 98px;}
+    header .header__logo {padding: 0;}
+    header .nav {padding: 54px 0 0 206px;}
 
     /* banner */
-    header .inner, section .inner {margin: 0;}
-    .banner {padding: 5.52% 0 0 13.68%; background-size: 12.45% auto; box-sizing: border-box;}
+    .banner {padding: 55px 0 0 156px; background-size: 141px 308px; background-position-y: top; box-sizing: border-box;}
     .banner .title {text-align: left;}
+    .banner .title h2{font-size: 3.46rem; margin-top: .1em;}
+    .banner .title p {font-size: .86rem; margin-top: 1.46em;}
+    .banner .banner__btn{margin-top: 45px;}
 
     /* about */
-    .about {padding-top: 210px; background-position-y: calc(100% - 240px), calc(100% - 130px);}
-    .about .title::before {width: 4.38%; height: 42px; top: 0;}
-    .about .title {padding-top: 5.43%; text-align: center;}
-    .about .title span {font-size: 0.86em; letter-spacing: 1.5px;}
-    .about .title h2 {font-size: 1.66em;}
+    .about {padding-top: 134px; background-position-y: calc(100% - 240px), calc(100% - 130px);}
+    .about .title::before {width: 50px; height: 43px; top: 0;}
+    .about .title {padding-top: 4em; margin: 0 2em; text-align: center;}
+    .about .title span {font-size: 0.93rem; letter-spacing: 1.5px;}
+    .about .title h2 {font-size: 25px;}
     .about .title p {font-size: 0.73em;}
     .about .btn__primary--pink {width: 100px; height: 30px; font-size: 15%;}
 
     /* feature */
-    .feature {margin-top: 7.28%;}
-    .feature .feature__cont ul li {height: 338px; padding-top: 180px; background-size: 27px;}
-    .feature .feature__cont ul li:hover {background-size: 27px;}
-    .feature .feature__cont ul li span {font-size: 14.35px;} */
-
-    /* service */
-    .service .tiles {margin-top: 7.894%;}
-    .service .article__service-tiles {text-align: center;}
-    .service .service__cont .text-wrap h3 {margin: 11.25% 0 6.5%;}
-    .service .service__cont .text-wrap button {margin-bottom: 6.41%;}
+    .feature {margin-top: 85px;}
+    /* .feature .feature__cont ul {height: 338px;} */
+    .feature .feature__cont ul li {height: 338px; padding-top: 180px; background:#ddd url(../images/hover_herbal.png)no-repeat; background-size: 30px; background-position: 50% 45%; }
+    .feature .feature__cont ul li:hover {background-color :#ff817e; background-size: 30px;}
+    .feature .feature__cont ul li span {visibility: visible; font-size: 1rem;} */
 
     /* testimonials */
-    .testimonials .slider__arrow-inner {width: 1000px;}
-    .testimonials .article__testimonials {background-size: 5.17% auto;}
-    .testimonials .testimonials__item p {padding: 0.877% 13.75%;}
+    .testimonials .slider__arrow-inner { width: 90%;}
 
+    /*  team */
     .team .title h2 {margin-top: 130px;}
     .team .team__cont .team__manager figcaption {text-align: center;}
-    .blog .article__blog-tiles .blog__date {margin-bottom: 11px; line-height: 1.4em;}
-    .blog .article__blog-tiles h3 {line-height: 1.4em;}
-    .blog .article__blog-tiles p {margin-top: 17px; line-height: 1.7em;}
+    .team .team__cont .team__manager figcaption {bottom: -16.8%;}
+    .team .team__cont .team__manager figcaption .btn__sns {opacity: 1;}
 
     /* reserved */
-    .reserved {height: auto; margin-top: 17.105%; padding: 11.22% 0 11.40% 8.42%; box-sizing: border-box;}
+    .reserved {height: auto; margin-top: 195px; padding: 128px 0 0 98px; box-sizing: border-box;}
     .reserved .reserved__wrap {max-width: none;}
     .reserved .reserved__wrap .reserved__thumbnail {display: none;}
     .reserved .reserved__wrap .reserved__cont {float: none; width: 100%; padding-left: 0; padding-top: 0; text-align: left;}
     .reserved .reserved__wrap .reserved__cont .form__note {width: calc(100% - 23.86%); margin-top: 5.38%;}
-    .reserved .reserved__wrap .reserved__cont input, select {width: calc(100% - 63%); margin-right: 20px; margin-bottom: 3.91%;}
+    .reserved .reserved__wrap .reserved__cont input, select {width: calc(100% - 63%); margin-right: 20px; margin-bottom: 40px;}
 
-    /* section--blog */
-    .tiles article {text-align: center;}
-
-    /* contact */
-    .contact .title h2 {margin-top: 130px;}
-    .contact .contact__cont {margin-top: 0; padding: 7.631% 8.596% 0;}
-
-    /* footer */
-    footer {margin-top: 12.28%;}
+    /* blog */
+    .blog .article__blog-tiles .text-wrap .blog__date { margin-top: 30px; margin-bottom: 11px; line-height: 1.4em;}
+    .blog .article__blog-tiles .text-wrap h3 { margin-top: 0; line-height: 1.4em;}
+    .blog .article__blog-tiles p {margin-top: 20px;}
 
 
-    /* common - tiles */
-    .tiles .text-wrap button {margin-bottom: 6.41%;}
-    .tiles .text-wrap .btn__primary span { font-size: .9em;}
 }
 
