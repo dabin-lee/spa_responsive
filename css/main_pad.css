@@ -38,7 +38,6 @@
 
     /* feature */
     .feature {margin-top: 85px;}
-    /* .feature .feature__cont ul {height: 338px;} */
     .feature .feature__cont ul li {height: 338px; padding-top: 180px; background:#ddd url(../images/hover_herbal.png)no-repeat; background-size: 30px; background-position: 50% 45%; }
     .feature .feature__cont ul li:hover {background-color :#ff817e; background-size: 30px;}
     .feature .feature__cont ul li span {visibility: visible; font-size: 1rem;} */

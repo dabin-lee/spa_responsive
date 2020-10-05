@@ -1,13 +1,17 @@
 /*: mobile ~ 767 */
 
 @media ( max-width: 767px ){
-    :root{
-        /* color */
-        --color-green: #a9c6a2;
-        --color-pink: #c384b2;
-        --color-yellow: #ded35c;
-        --color-blue: #84b3c3;
-    }
+    /* common */
+    .tiles {display: block; margin-top: 50px;}
+    .tiles article {width: 100%; margin-bottom: 50px;}
+    .tiles article:last-child {margin-bottom: 0;}
+    .tiles article .article_img {padding-top: 65%;}
+    .tiles__btn-list {width: 224px;}
+    .tiles .text-wrap .btn__primary span {font-size: 18px;}
+
+    .section .title { padding: 0 2.13em;}
+    .section .title h2 {margin-top: 1.4em;}
+    .section .title h2 + p {margin-top: 8px;}
 
 
     /* header */
@@ -18,8 +22,7 @@
 
     header .nav {padding: 0;}
     header .nav .gnb__button {display: grid; grid-template-rows: repeat(2, 1fr); float: right; width: 60px; height: auto; margin-top: 20px; cursor: pointer; box-sizing: border-box;}
-    header .nav .gnb__button span {display: inline-block; width: 100%; height: 8px; margin-bottom: 20px; background: #ff817e; box-sizing: border-box;
-        transition: .3s;}
+    header .nav .gnb__button span {display: inline-block; width: 100%; height: 8px; margin-bottom: 20px; background: #ff817e; box-sizing: border-box; transition: .3s;}
     header .nav .gnb__button span:last-child{margin-bottom: 0;}
     header .nav .gnb__button span:nth-child(2){left:0%;}
 
@@ -41,16 +44,13 @@
     /* banner */
     .banner {margin-top:60px; padding: 0; background-size: 150px 290px; background-position: 0 0;}
     .banner .inner {padding-left: 160px; box-sizing: border-box;}
-
-
     .banner .inner .title {padding: 0 0;}
     .banner .inner .title h2 {margin: 23px 0;}
     .banner .inner .title p {margin-top: 0; line-height: 1.86em;}
-
     .banner .banner__btn {display: block; margin-top: 50px;}
     .banner .banner__btn-submit {width: 170px; height: 50px; margin-right: 0;}
-
     .banner .banner__btn-play{margin-top: 47px;}
+
     .about {padding-top: 200px; background: none;}
     .about .title {padding: 103px 0 0;}
     .about .title::before{width: 84px; height:70px; top: -40%;}
@@ -133,7 +133,6 @@
     .contact .contact__cont .contact__form {width: 100%;}
     .contact .contact__cont .contact__form .input--board {margin-bottom: 0;}
 
-
     /* footer */
     .footer {margin-top: 50px;}
     footer .inner {padding: 110px 32px 0 32px;}
@@ -141,36 +140,19 @@
     footer .inner .footer-nav__bar {width: 100%; font-size: 0.933em;}
     footer .inner .footer-nav__bar .nav__bar {margin: 45px 82px 0;}
 
-
     footer .footer__sns {margin-top: 45px;}
-    footer .footer__sns ul .facebook::before {left: 16px;}
+    footer .footer__sns ul .facebook::before {left: 10px;}
     footer .footer__sns ul li::before {left: 21px;}
     footer .footer__sns .footer__sns--type02 .facebook::before {left: 17px;}
     footer .footer__sns .footer__sns--type02 li::before {left: 21px;}
     footer .footer__sns .footer__sns--type03 .facebook::before {left: 17px;}
     footer .footer__sns .footer__sns--type03 li::before {left: 21px;}
 
-
-    /* common */
-
-    /* .section {padding: 0 32px;} */
-    .tiles {display: block; margin-top: 50px;}
-    .tiles article {width: 100%; margin-bottom: 50px;}
-    .tiles article:last-child {margin-bottom: 0;}
-    .tiles article .article_img {padding-top: 65%;}
-    .tiles__btn-list {width: 224px;}
-    .tiles .text-wrap .btn__primary span {font-size: 18px;}
-
-    .section .title { padding: 0 2.13em;}
-    .section .title h2 {margin-top: 1.4em;}
-    .section .title h2 + p {margin-top: 8px;}
 }
 
 
 
 @media ( max-width: 383px ){
-
-
     /* common */
     .section .title { padding: 0 2.13em; margin: 0;}
     .section .title h2 {font-size: 20px; margin-top: .8em;}
@@ -232,7 +214,8 @@
     .testimonials .testimonials__item .testimonials__name {margin-top: 14px; font-size: 7px;}
     .testimonials .indicator  {bottom: 20px; width: 15%;}
     .testimonials .indicator .indicator__btn {width: 4px; height: 4px; }
-    .testimonials .indicator .indicator--play-pause button {width: 4px; height: 4px;}
+    .testimonials .indicator .indicator--play-pause {position: relative; width: 4px; height: 4px;}
+    .testimonials .indicator .indicator--play-pause button {position: absolute; top:0; left:0; width: 100%; height:100%; background-position-x: 34px; background-position-y: 9px; background-size: 5px;}
     .testimonials .indicator__btn button span {opacity: 0;}
 
     .testimonials .slider__arrow{position: absolute; bottom: 20%; height: 0;}
@@ -252,18 +235,18 @@
 
     .team .team__manager .btn__sns li:nth-child(2) a {background-position-x: -30px;}
     .team .team__manager .btn__sns li:nth-child(3) a {background-position-x: -63px;}
-    .team .team__manager .btn__sns li:nth-child(4) a {background-position-x: -95px;}
+    .team .team__manager .btn__sns li:nth-child(4) a {background-position-x: -96px;}
 
     /* tiles hover */
     .team .team__manager .btn__sns li:nth-child(2):hover a {background-position-x: -30px;}
     .team .team__manager .btn__sns li:nth-child(2) a:focus{background-position-x: -30px;}
     .team .team__manager .btn__sns li:nth-child(3):hover a {background-position-x: -63px;}
     .team .team__manager .btn__sns li:nth-child(3) a:focus {background-position-x: -63px;}
-    .team .team__manager .btn__sns li:nth-child(4):hover a {background-position-x: -95px;}
-    .team .team__manager .btn__sns li:nth-child(4) a:focus {background-position-x: -95px;}
+    .team .team__manager .btn__sns li:nth-child(4):hover a {background-position-x: -96px;}
+    .team .team__manager .btn__sns li:nth-child(4) a:focus {background-position-x: -96px;}
 
     /* reserve */
-    .reserved {margin-top: 0; padding: 0 16px;}
+    .reserved {height: 335px; margin-top: 0; padding: 0 16px;}
     .reserved .reserved__wrap .reserved__cont {padding: 62px 0;}
     .reserved .reserved__wrap .reserved__cont input, select {float:left; width: 150px; box-sizing: border-box; margin-right: 29px; margin-bottom: 20px; padding-bottom: 0.8em; font-size: 0.4rem;}
     .reserved .reserved__wrap .reserved__cont .form__note {width: 100%;}
@@ -285,7 +268,7 @@
     .contact .contact__cont .contact__info li h3 {width: 25px; height: 25px; background-position: 8px; background-size: 10px; }
     .contact .contact__cont .contact__info li p {font-size: 0.4rem; margin-left: 14px;}
 
-    .contact .contact__cont .contact__form input {height: 24px; margin-bottom: 10px; padding: 10px 0 10px 10px; font-size: 0.4rem;}
+    .contact .contact__cont .contact__form input {height: 24px; margin-bottom: 10px; padding: 10px 0 10px 10px; font-size: 0.4rem; border-radius: 0;}
     .contact .contact__cont .contact__form .input--board {height: 76px; padding: 14px 0 50px 10px;}
     .contact .contact__cont .contact__form .btn__primary--pink { width: 85px; height: 24px; margin-top: 6px; font-size: 6px; }
 
@@ -298,21 +281,67 @@
     footer {margin-top: 26px;}
     footer .inner {padding: 50px 16px 0 16px;}
     footer .footer__logo {width: 58px; height: 40px;}
-    footer .inner .footer-nav__bar {padding-top: 24px; font-size: 0.46em;}
+    footer .inner .footer-nav__bar {padding-top: 24px;}
     footer .inner .footer-nav__bar .nav__bar {margin: 0;}
+    footer .inner .footer-nav__bar .nav__bar li a {font-size: 0.53em;}
     footer .footer__sns {margin-top: 24px;}
     footer p {padding: 24px 0; font-size: 0.4em;}
 
     footer .footer__sns {margin-top: 45px;}
-    footer .footer__sns ul .facebook::before {left: 16px;}
-    footer .footer__sns ul li::before {left: 12px;}
-    footer .footer__sns .footer__sns--type02 .facebook::before {left: 12px;}
-    footer .footer__sns .footer__sns--type02 li::before {left: 21px;}
-    footer .footer__sns .footer__sns--type03 .facebook::before {left: 12px;}
-    footer .footer__sns .footer__sns--type03 li::before {left: 21px;}
+    footer .footer__sns ul li::before {height: 8px; left: 12px;}
+    footer .footer__sns ul .facebook::before {left: 9px;}
 
+    /* type01 */
+    footer .footer__sns .footer__sns--type01 li a {background: url(../images/sns_sprite_mo.png)no-repeat;}
+    footer .footer__sns .footer__sns--type01 .facebook a {width: 6px; height: 8px; background-position-x: 0;}
+    footer .footer__sns .footer__sns--type01 .twitter a {width: 8px; height: 8px; background-position-x: -25px;}
+    footer .footer__sns .footer__sns--type01 .instagram a {width: 8px; height: 8px; background-position-x: -50px;}
+    footer .footer__sns .footer__sns--type01 .vingle a {width: 8px; height: 8px; background-position-x: -75px;}
+
+    footer .footer__sns .footer__sns--type01 li:hover a {background: url(../images/sns_sprite_mo.png)no-repeat;}
+    footer .footer__sns .footer__sns--type01 .facebook:hover a {width: 6px; height: 8px; background-position: 0 -50px;}
+    footer .footer__sns .footer__sns--type01 .twitter:hover a {width: 8px; height: 8px; background-position: -25px -25px;}
+    footer .footer__sns .footer__sns--type01 .instagram:hover a {width: 8px; height: 8px; background-position: -50px -25px;}
+    footer .footer__sns .footer__sns--type01 .vingle:hover a {width: 8px; height: 8px; background-position: -75px -25px;}
+
+
+    /* type02 */
+    footer .footer__sns .footer__sns--type02 li::before {height: 8px; left: 12px;}
+    footer .footer__sns .footer__sns--type02 li a {width: 8px; height: 8px;}
+    footer .footer__sns .footer__sns--type02 li a::before {width: 8px; height: 8px; background: url(../images/sns_sprite_mo.png)no-repeat;}
+
+    footer .footer__sns .footer__sns--type02 .facebook::before {left: 9px;}
+    footer .footer__sns .footer__sns--type02 .facebook a::before {background-position-x: 0;}
+    footer .footer__sns .footer__sns--type02 .twitter a::before {background-position-x: -25px;}
+    footer .footer__sns .footer__sns--type02 .instagram a::before {background-position-x: -50px;}
+    footer .footer__sns .footer__sns--type02 .vingle a::before {background-position-x: -75px;}
+
+    footer .footer__sns .footer__sns--type02 li:hover a::before {background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__sns .footer__sns--type02 .facebook:hover a::before {background-position: 0 -25px;}
+    footer .footer__sns .footer__sns--type02 .twitter:hover a::before {background-position: -25px -25px;}
+    footer .footer__sns .footer__sns--type02 .instagram:hover a::before {background-position: -50px -25px;}
+    footer .footer__sns .footer__sns--type02 .vingle:hover a::before {background-position: -75px -25px;}
+
+
+    /* footer - type03 */
+    footer .footer__sns .footer__sns--type03 .facebook {margin: 0 0.70% 0 1.14%;}
+    footer .footer__sns .footer__sns--type03 li::before {left: 12px;}
+    footer .footer__sns .footer__sns--type03 .facebook::before {left: 9px;}
+
+    footer .footer__sns .footer__sns--type03 li a {width: 8px; height: 8px; background: url(../images/sns_sprite_mo.png)no-repeat;}
+    footer .footer__sns .footer__sns--type03 .facebook a {background-position-x: 0;}
+    footer .footer__sns .footer__sns--type03 .twitter a {background-position-x: -25px;}
+    footer .footer__sns .footer__sns--type03 .instagram a {background-position-x: -50px;}
+    footer .footer__sns .footer__sns--type03 .vingle a {background-position-x: -75px;}
+
+    footer .footer__sns .footer__sns--type03 li:hover a {background: url(../images/sns_sprite_mo.png)no-repeat;}
+    footer .footer__sns .footer__sns--type03 .facebook:hover a {background-position: 0 -25px;}
+    footer .footer__sns .footer__sns--type03 .twitter:hover a {background-position: -25px -25px;}
+    footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position: -50px -25px;}
+    footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -75px -25px;}
 }
 
 
-
-
+@media ( max-width: 320px ){
+    .reserved {height: 425px;}
+}
