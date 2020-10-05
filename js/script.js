@@ -201,6 +201,9 @@ $(function(){
     $('.gnb__button').on({
         click : function(){
             menuBarClickFn();
+        },
+        focusin: function(){
+            menuBarClickFn();
         }
     });
 
@@ -213,7 +216,8 @@ $(function(){
             })
             $('.gnb__button').addClass('addClosebar');
             console.log(clkbtn);
-        }else if( clkbtn == true ){
+        }
+        else if( clkbtn == true ){
             clkbtn = false;
             console.log(clkbtn);
             $('.gnb__button').removeClass('addClosebar');
@@ -222,6 +226,18 @@ $(function(){
             })
         }
     }
+
+    // nav__bar focus_on/out 될 때
+    var lastNaVbar = $('.nav__bar--on').find('li').last();
+    lastNaVbar.on("focusout", function(){
+        $('.nav__bar--on').stop().animate({left : 100 +'%'}, 500, function(){
+        $(this).stop().animate({opacity : 0},0);
+        })
+    });
+
+
+
+
 
     // swipe
     var swiper = new Swiper('.swiper-container', {
