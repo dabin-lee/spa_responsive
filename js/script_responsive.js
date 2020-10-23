@@ -57,6 +57,20 @@ $(function(){
         })
 
 
+        // 4.section--service
+        var winW = $(window).innerWidth();
+        if( winW <= 767 ){
+            $('.section--service .service__cont .text-wrap .tiles__list--btn').height( $('.tiles__list--btn').width() * 0.276 );
+        }
+
+
+
+
+        // 2.section--about
+        var winW = $(window).innerWidth();
+        if( winW <= 767 ){
+            $('.feature__cont').find('li').height( $(this).width() * 1.2 );
+        }
 
         // 4.section--service
         var winW = $(window).innerWidth();

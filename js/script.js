@@ -1,4 +1,7 @@
 $(function(){
+    $('a[href="#"]').click(function(e) {
+		e.preventDefault();
+	});
 
     // section--team
     var $maNagerLi = $('.tiles > li.team__manager'),
@@ -37,7 +40,7 @@ $(function(){
 			}else{
 				_thisLi.addClass('on');
 			}
-		});
+        });
 
     // section--testimonials
         var cnt = 0,
@@ -195,9 +198,8 @@ $(function(){
             scrollbar: true
         });
 
-
     // header = navbar
-    var clkbtn = false;
+    var clkbtn = false; //클릭안한 초기값
     $('.gnb__button').on({
         click : function(){
             menuBarClickFn();
@@ -210,33 +212,51 @@ $(function(){
     // 햄버거메뉴 리스트
     function menuBarClickFn(){
         if( clkbtn === false) {
-            clkbtn = true;
-            $('.nav__bar--on').stop().animate({opacity:1},0,function(){
+            clkbtn = true; //클릭한 상태로 true변환
+            $('.nav__bar--mo').stop().animate({opacity:1},0,function(e){
                 $(this).stop().animate({left : 0}, 500);
+                // e.stopPropagation();
             })
-            $('.gnb__button').addClass('addClosebar');
+            $('.nav__btn-wrap').addClass('nav__btn-x');
             console.log(clkbtn);
         }
         else if( clkbtn == true ){
             clkbtn = false;
             console.log(clkbtn);
-            $('.gnb__button').removeClass('addClosebar');
-            $('.nav__bar--on').stop().animate({left : 100 +'%'}, 500, function(){
+            $('.nav__btn-wrap').removeClass('nav__btn-x');
+            $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
                 $(this).stop().animate({opacity : 0},0);
             })
         }
     }
 
-    // nav__bar focus_on/out 될 때
-    var lastNaVbar = $('.nav__bar--on').find('li').last();
-    lastNaVbar.on("focusout", function(){
-        $('.nav__bar--on').stop().animate({left : 100 +'%'}, 500, function(){
-        $(this).stop().animate({opacity : 0},0);
+    // 딤bg 클릭했을 때 animation
+    function navBarDemmedFn(){
+        $('.gnb--dimmed').on({
+            click : function(){
+                $('.nav__btn-wrap').removeClass('nav__btn-x');
+                $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
+                    $(this).stop().animate({opacity : 0},0);
+                })
+            }
         })
-    });
+    }
+    navBarDemmedFn();
 
 
+    // nav__bar focus_on/out 될 때
+    var lastNaVbar = $('.nav__bar--mo').find('li').last();
+        lastNaVbar.on("focusout", function(){
+            $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
+            $(this).stop().animate({opacity : 0},0);
+            })
+        });
 
+
+    var winW = $(window).innerWidth();
+    if( winW <= 767 ){
+        $('.feature__cont').find('li').height( $('.feature__cont').find('li').width() * 0.83 );
+    }
 
 
     // swipe
@@ -251,7 +271,7 @@ $(function(){
             767: {
                 allowTouchMove : true, //드래그 방지
                 loop: true, // 무한 반복
-                slidesPerView: 1.45, //동시에 보여줄 슬라이드 개수
+                slidesPerView: 3.12, //동시에 보여줄 슬라이드 개수
                 slidesPerGroup : 1.45, //그룹으로 묶을 수
                 initialSlide:1.2,
                 centeredSlides: true //가운데 정렬

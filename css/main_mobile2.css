@@ -22,19 +22,22 @@
     header .nav {padding: 0;}
     header .nav .nav__btn-wrap {z-index: 99999; position: absolute; top: 10px; right: 16px;}
     header .nav .nav__btn-wrap .gnb__button {display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 32px; cursor: pointer; box-sizing: border-box;}
-    header .nav .nav__btn-wrap .gnb__button span {display: inline-block; width: 100%; height: 4px; background: #ff817e; box-sizing: border-box; transition: .3s;}
+    header .nav .nav__btn-wrap .gnb__button span {display: inline-block; width: 100%; height: 4px; background-color: #000;}
 
-    header .nav .nav__btn-x {position: fixed;}
-    header .nav .nav__btn-x span {position: absolute; top: 50%; transition: .3s;}
-    header .nav .nav__btn-x span:nth-child(1){transform: rotate(-135deg);}
-    header .nav .nav__btn-x span:nth-child(2){opacity: 0;}
-    header .nav .nav__btn-x span:nth-child(3){transform: rotate(135deg);}
+    /*x로 바뀜*/
+    header .nav__btn--on .nav__btn-wrap {position: fixed;}
+    header .nav__btn--on .gnb__button span {display: inline-block; width: 100%; height: 4px; background: #ff817e; box-sizing: border-box; transition: .3s;}
+
+    header .nav__btn--on {position: relative;}
+    header .nav__btn--on span {position: absolute; top: 50%; transition: .3s;}
+    header .nav__btn--on span:nth-child(1){transform: rotate(-135deg);}
+    header .nav__btn--on span:nth-child(2){opacity: 0;}
+    header .nav__btn--on span:nth-child(3){transform: rotate(135deg);}
 
 
     /* click - nav__bar  */
-    header nav .nav__bar--mo {position: fixed; top: 0; left: 100%; width: 100%;}
-    header nav .gnb--dimmed {display: inline-block; position: fixed; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.7);}
-    header nav .nav__bar--mo .nav__bar--on{z-index: 999; display: block; position: absolute; left: 0; width: 100%; max-width: 767px; opacity: 1; overflow: hidden;}
+    header nav .nav__bar--mo{z-index: 999; display: block; position: fixed; top: 0; left:100%; width: 100%; height: 100%; background-color: rgba(0,0,0,.7);}
+    header nav .nav__bar--mo .nav__bar--on{display: block; position: absolute; left: 0; width: 100%; max-width: 767px; opacity: 1; overflow: hidden;}
     header nav .nav__bar--mo .nav__bar--on {top: 55px; padding : 5px 0;}
     header nav .nav__bar--mo .nav__bar--on li {width: 100%; margin-right: 0%; text-align: center; border-bottom: 1px solid #ff7474;}
     header nav .nav__bar--mo .nav__bar--on li a{padding: 8px 0; font-size: .8rem; color: #fff; background: #ff817e;}

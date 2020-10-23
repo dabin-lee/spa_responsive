@@ -1,4 +1,7 @@
 $(function(){
+    $('a[href="#"]').click(function(e) {
+		e.preventDefault();
+	});
 
     // section--team
     var $maNagerLi = $('.tiles > li.team__manager'),
@@ -37,7 +40,7 @@ $(function(){
 			}else{
 				_thisLi.addClass('on');
 			}
-		});
+        });
 
     // section--testimonials
         var cnt = 0,
@@ -46,7 +49,7 @@ $(function(){
             $slides = $slideGroup.find('> .article__testimonials'),
             $duration = 500,
             $easing = 'easeInOutExpo',
-            $arrowBox = $('.slide__wrap'),
+            $arrowBox = $('.slider__arrow-inner'),
             $prevArrow = $arrowBox.find('.slider__arrow-btn--prev'),
             $nextArrow = $arrowBox.find('.slider__arrow-btn--next'),
             $inDicatorBtn = $('.indicator__btn');
@@ -95,7 +98,7 @@ $(function(){
                 // console.log(ind_);
                 $(this).on({
                     click : function(){
-						cnt = ind_;
+						cnt = ind_-1;
                         goToslide();
                     }
                 })
@@ -114,11 +117,13 @@ $(function(){
             }
             $prevArrow.on({
                 click : function(){
+                    console.log('pre');
                     prevSlide();
                 }
             })
             $nextArrow.on({
                 click : function(){
+                    console.log('nex');
                     nextSlide();
                 }
             })
@@ -194,104 +199,99 @@ $(function(){
         });
 
 
-    var winH = $(window).innerHeight();
-    $(window).resize(function(){
 
-        winW = $(window).innerWidth();
-        // header = navbar
-        var clkbtn = false;
-        $('.gnb__button').on({
-            click : function(){
-                menuBarClickFn();
-            }
-        });
 
-        // 햄버거메뉴 리스트
-        function menuBarClickFn(){
-            if( clkbtn === false) {
-                clkbtn = true;
-                $('.nav__bar--on').stop().animate({opacity:1},0,function(){
-                    $(this).stop().animate({left : 0}, 500);
-                })
-                $('.gnb__button').addClass('addClosebar');
-                console.log(clkbtn);
-            }else if( clkbtn == true ){
-                clkbtn = false;
-                console.log(clkbtn);
-                $('.gnb__button').removeClass('addClosebar');
-                $('.nav__bar--on').stop().animate({left : 100 +'%'}, 500, function(){
-                    $(this).stop().animate({opacity : 0},0);
-                })
-            }
+        // 햄버거 리스트가 클릭이 되도 닫히지 않도록
+        // function navBarListFn(){
+        //     var navlist = $('.nav__bar').find('li');
+        //     navlist.on({
+        //         click : function(){
+        //             $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
+        //                 $(this).stop().animate({opacity : 0},0);
+        //             })
+        //         }
+        //     })
+        // }
+        // navBarListFn();
+
+    // header = navbar
+    var clkbtn = false;
+    $('.gnb__button').on({
+        click : function(){
+            menuBarClickFn();
+        },
+        focusin: function(){
+            menuBarClickFn();
         }
+    });
 
-        // swiper
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 4,
-            initialSlide: 1,
-            roundLengths: true,
-            allowTouchMove: false,
-            slidesOffsetBefore: 1.5, // 컨테이너 시작 부분 (모든 슬라이드 이전)에 슬라이드 오프셋 추가 (픽셀 단위)
+    // 햄버거메뉴 리스트
+    function menuBarClickFn(){
+        if( clkbtn === false) {
+            clkbtn = true;
+            $('.nav').addClass('nav__btn--on');
+            $('.nav__bar--mo').stop().animate({opacity:1},0,function(e){
+	            e.preventDefault();
+                $(this).stop().animate({left : 0}, 500);
+            })
+            console.log(clkbtn);
+        }
+        else if( clkbtn == true ){
+            clkbtn = false;
+            console.log(clkbtn);
+            $('.nav').removeClass('nav__btn--on');
+            $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(e){
+                e.preventDefault();
+                $(this).stop().animate({opacity : 0},0);
+            })
+        }
+    }
+
+    // // 딤bg 클릭했을 때 animation
+    // function navBarDemmedFn(){
+    //     $('.nav__bar--mo').on({
+    //         click : function(){
+    //             $('.gnb__button').removeClass('addClosebar');
+    //             $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
+    //                 $(this).stop().animate({opacity : 0},0);
+    //             })
+    //         }
+    //     })
+    // }
+    // navBarDemmedFn();
+
+    // // nav__bar focus_on/out 될 때
+    // var lastNaVbar = $('.nav__bar--mo').find('li').last();
+    // lastNaVbar.on("focusout", function(){
+    //     $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
+    //     $(this).stop().animate({opacity : 0},0);
+    //     })
+    // });
 
 
-            //반응형
-            breakpointsInverse: false,
-            breakpoints: {
-                768:{
-                    spaceBetween: 0,
-                    allowTouchMove: false,
-                },
-                767: {
-                    spaceBetween: 5,
-                    slidesPerView: 1.45,
-                    initialSlide:1.2,
-                    loop: true,
-                    centeredSlides: true,
-                    allowTouchMove: true,
-                }
-            }
-        });
+    var winW = $(window).innerWidth();
+    if( winW <= 767 ){
+        $('.feature__cont').find('li').height( $('.feature__cont').find('li').width() * 0.83 );
+    }
 
-            // 5. testimonials
-            var tesTimonials = $('.testimonials .article__testimonials').width(),
-                sec5H = $('.testimonials').height();
-                $('.testimonials .article__testimonials').height( tesTimonials * 0.3746);
-                $('.testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2});
 
-            // 6. team
-            var memBersnsBtn = $('.on .btn__sns > ul').width();
-                $('.on .btn__sns > ul').height( memBersnsBtn * 0.19 );
-
-            // 7. reserved__wrap
-            // var reservedBtnW = $('.reserved__cont > form > .btn__primary--pink').width();
-            //     $('.reserved__cont > form > .btn__primary--pink').height( reservedBtnW * 0.25 );
-            //     if(winW <= 767){
-            //         $('.reserved__cont > form > .btn__primary--pink').height( 200 * 0.25 );
-            //     }
-
-            // 9. section--contact
-            var visitInputW = $('.contact__form > input').width();
-                $('.contact__form .input--board').css({height: visitInputW * 0.2707 });
-
-            // 10. footer .footer__logo
-            var footerLogoW =  $('.footer__logo').width();
-                $('.footer__logo').css({height: footerLogoW * 0.72});
-
-            // common - button
-            var btnrESERVE = $('.banner__btn-play');
-            var btnPrimary = $('.btn__primary');
-            var btnW1 = btnrESERVE.width();
-            var btnW2 = btnPrimary.width();
-                btnPrimary.height( btnW2 *0.2941 );
-                btnPrimary.height( btnW2 *0.2941 );
-
-            //common - tiles
-            $('.tiles__btn-list').height( $('.tiles__btn-list').width() * 0.2941 );
-
-            if( winW <= 767 ){
-                $('.service .service__cont .text-wrap .tiles__btn-list').height( $('.tiles__btn-list').width() * 0.276 );
-                $('.banner__btn-play').height('50px');
-            };
-
-        });
-    }); //반응형
+    // swipe
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 5, //슬라이드 간격
+        allowTouchMove: false,
+        loop: false,
+        slidesPerView: 4, //동시에 보여줄 슬라이드 개수
+        slidesPerGroup : 4, //그룹으로 묶을 수
+        initialSlide:1,
+        breakpoints: {
+            767: {
+                allowTouchMove : true, //드래그 방지
+                loop: true, // 무한 반복
+                slidesPerView: 3.12, //동시에 보여줄 슬라이드 개수
+                slidesPerGroup : 1.45, //그룹으로 묶을 수
+                initialSlide:1.2,
+                centeredSlides: true //가운데 정렬
+            },
+        }
+    })
+});
