@@ -200,11 +200,10 @@ $(function(){
 
     // header = navbar
     var clkbtn = false; //클릭안한 초기값
+    var lastNaVbar = $('.nav__bar--mo').find('li').last();
+
     $('.gnb__button').on({
         click : function(){
-            menuBarClickFn();
-        },
-        focusin: function(){
             menuBarClickFn();
         }
     });
@@ -215,7 +214,6 @@ $(function(){
             clkbtn = true; //클릭한 상태로 true변환
             $('.nav__bar--mo').stop().animate({opacity:1},0,function(e){
                 $(this).stop().animate({left : 0}, 500);
-                // e.stopPropagation();
             })
             $('.nav__btn-wrap').addClass('nav__btn-x');
             console.log(clkbtn);
@@ -223,12 +221,21 @@ $(function(){
         else if( clkbtn == true ){
             clkbtn = false;
             console.log(clkbtn);
+            $('.gnb--closebtn').removeAttr('tabIndex');
             $('.nav__btn-wrap').removeClass('nav__btn-x');
             $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
                 $(this).stop().animate({opacity : 0},0);
             })
         }
     }
+
+    // 모달 안에서만 포커스 이동
+
+    // 모달에서 마지막으로 close버튼으로 포커스
+    lastNaVbar.on("focusout", function(){
+        $('.gnb--closebtn').attr("tabIndex",0).focus();
+    });
+
 
     // 딤bg 클릭했을 때 animation
     function navBarDemmedFn(){
@@ -244,18 +251,14 @@ $(function(){
     navBarDemmedFn();
 
 
-    // nav__bar focus_on/out 될 때
-    var lastNaVbar = $('.nav__bar--mo').find('li').last();
-        lastNaVbar.on("focusout", function(){
-            $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
-            $(this).stop().animate({opacity : 0},0);
-            })
-        });
 
 
+    // 반응형 width & height
     var winW = $(window).innerWidth();
+    const featureTile = $('.feature__cont').find('li');
     if( winW <= 767 ){
-        $('.feature__cont').find('li').height( $('.feature__cont').find('li').width() * 0.83 );
+        // $(featureTile).height( $(featureTile) * 0.83 );
+        console.log('dddd');
     }
 
 

@@ -23,6 +23,7 @@
     header .nav .nav__btn-wrap {z-index: 99999; position: absolute; top: 10px; right: 16px;}
     header .nav .nav__btn-wrap .gnb__button {display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 32px; cursor: pointer; box-sizing: border-box;}
     header .nav .nav__btn-wrap .gnb__button span {display: inline-block; width: 100%; height: 4px; background: #ff817e; box-sizing: border-box; transition: .3s;}
+    header .nav .nav__btn-wrap .gnb__button .gnb--closebtn{display: inline-block; position: absolute; top:0; left:0; width: 100%; height: 100%; background-color: transparent; text-indent: -9999px;}
 
     header .nav .nav__btn-x {position: fixed;}
     header .nav .nav__btn-x span {position: absolute; top: 50%; transition: .3s;}
@@ -33,7 +34,7 @@
 
     /* click - nav__bar  */
     header nav .nav__bar--mo {position: fixed; top: 0; left: 100%; width: 100%;}
-    header nav .gnb--dimmed {display: inline-block; position: fixed; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.7);}
+    header nav .gnb--dimmed {z-index: 998; display: inline-block; position: fixed; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.7);}
     header nav .nav__bar--mo .nav__bar--on{z-index: 999; display: block; position: absolute; left: 0; width: 100%; max-width: 767px; opacity: 1; overflow: hidden;}
     header nav .nav__bar--mo .nav__bar--on {top: 55px; padding : 5px 0;}
     header nav .nav__bar--mo .nav__bar--on li {width: 100%; margin-right: 0%; text-align: center; border-bottom: 1px solid #ff7474;}
@@ -72,7 +73,7 @@
     /* .feature */
     .feature {margin-top: 18px;}
     .feature .feature__cont {position: relative; width: 100%;}
-    .feature .feature__cont ul li {width: 62.05%; /*238 1.19*/ height: 284px; padding-top: 0; background-size: 14px; background-position: 50% 45%;}
+    .feature .feature__cont ul li {width: 62.05%; height: 284px; padding-top: 0; background-size: 14px; background-position: 50% 45%;}
     .feature .feature__cont ul li:hover { background-size: 14px; background-position: 50% 45%; }
     .feature .feature__cont ul li span {position: absolute; top: 50%; left: 50%; transform: translate(-50%); font-size: 0.73rem;}
 
@@ -173,7 +174,6 @@
     footer .footer__sns {margin-top: 22px;}
     footer .footer__sns ul .facebook {margin: 0;}
     footer .footer__sns ul .facebook::before {left: 24px;}
-    /* footer .footer__sns ul li {margin: 0 1.31%;} */
     footer .footer__sns ul li::before {left: 33px; height: 24px;}
 
 
@@ -189,4 +189,28 @@
     footer .footer__sns .footer__sns--type01 .instagram:hover a {width: 24px; height: 24px; background-position: -167px -50px;}
     footer .footer__sns .footer__sns--type01 .vingle:hover a {width: 24px; height: 24px; background-position: -253px -50px;}
 
+    /* footer - type02 */
+    footer .footer__sns .footer__sns--type02 .facebook {margin: 0 0.701% 0 1.14%;}
+    footer .footer__sns .footer__sns--type02 li::before {left: 28px;}
+    footer .footer__sns .footer__sns--type02 .facebook::before {left: 21px;}
+    footer .footer__sns .footer__sns--type02 li a {position:relative; width:24px; height:24px;}
+    footer .footer__sns .footer__sns--type02 li a::before {content: ''; position: absolute; top:0; left:0; width:13px; height:14px; background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__sns .footer__sns--type02 .facebook a::before {width: 24px; height: 24px; background-position-x: 0;}
+    footer .footer__sns .footer__sns--type02 .twitter a::before {width: 24px; height: 24px; background-position-x: -50px;}
+    footer .footer__sns .footer__sns--type02 .instagram a::before {width: 24px; height: 24px; background-position-x: -100px;}
+    footer .footer__sns .footer__sns--type02 .vingle a::before {width: 24px; height: 24px; background-position-x: -150px;}
+
+    footer .footer__sns .footer__sns--type02 li:hover a::before {background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__sns .footer__sns--type02 .facebook:hover a::before {width: 24px; height: 24px; background-position: 0 -50px;}
+    footer .footer__sns .footer__sns--type02 .twitter:hover a::before {width: 24px; height: 24px; background-position: -50px -50px;}
+    footer .footer__sns .footer__sns--type02 .instagram:hover a::before {width: 24px; height: 24px; background-position: -100px -50px;}
+    footer .footer__sns .footer__sns--type02 .vingle:hover a::before {width: 24px; height: 24px; background-position: -150px -50px;}
+
+
+}
+
+/*: mobile ~ 380 */
+
+@media ( max-width: 380px ){
+    .testimonials {height: 435px;}
 }
