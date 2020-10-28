@@ -280,15 +280,21 @@ $(function(){
 
 
     // 반응형 width & height
-    // $(window).resize(function(){
-    //     var winW = $(window).innerWidth();
-    //     const featureTile = $('.feature__cont').find('li');
-    //     if( winW <= 767 ){
-    //         // 5. section--testimonials
-    //         const tesTimonialsW = $('.testimonials').width();
-    //             console.log('width:' +tesTimonialsW);
-    //             $('.testimonials').height( tesTimonialsW * 0.557);
-    //             console.log('height:' + $('.testimonials').height());
-    //         // $('.section--testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2});
-    //     }
-    // });
+    $(window).resize(function(){
+        var winW = $(window).innerWidth();
+        // const featureTile = $('.feature__cont').find('li');
+        // if( winW <= 767 ){
+        //     // 5. section--testimonials
+        //     const tesTimonialsW = $('.testimonials').width();
+        //         console.log('width:' +tesTimonialsW);
+        //         $('.testimonials').height( tesTimonialsW * 0.557);
+        //         console.log('height:' + $('.testimonials').height());
+        //     // $('.section--testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2});
+        // }
+
+        if( winW <= 767 ){
+            $('.feature__cont').find('li').height( $(this).width() * 0.43 );
+        }
+
+
+    });

@@ -172,8 +172,8 @@ header .nav ul li {margin-right: 40px;}
 .contact .contact__cont {display: flex; height: auto; padding: 92px 98px 0 98px;}
 .contact .contact__cont .contact__info {width: 322px; margin-right: 98px;}
 .contact .contact__cont .contact__info li {display: flex; margin-bottom: 12.98%; box-sizing: border-box;}
-.contact .contact__cont .contact__info li h3 {display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: var(--color-pink) url(../images/visit--info__icon.png)no-repeat;
-    background-position-X: 16px; background-position-y: 15px; text-indent: -9999px; content: '';}
+.contact .contact__cont .contact__info li h3 {display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: #ff817e url(../images/visit--info__icon.png)no-repeat;
+background-position-X: 16px; background-position-y: 15px; text-indent: -9999px; content: '';}
 
 
 
