@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./css/common.css" type="text/css" />
 
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_ie.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_pad.css">
     <link rel="stylesheet" href="./css/main_mobile.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
@@ -46,7 +46,7 @@
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                                <span class="gnb--closebtn">닫기</span>
+                                <!-- <span class="gnb--closebtn" tabindex = "0">닫기</span> -->
                             </button>
                         </div>
                         <div class="nav__bar--mo">
@@ -57,7 +57,7 @@
                                 <li><a href="#">SERVICE</a></li>
                                 <li><a href="#">CONTACT</a></li>
                             </ul>
-                            <span class="gnb--dimmed"></span>
+                            <span class="gnb__dimmed-bg"></span>
                         </div>
                     </nav>
                 </div>
@@ -79,7 +79,10 @@
                                     behold it createdgood saw after she'd Our set living.</p>
                             </div>
                             <div class="banner__btn"> <!-- 7. banner--submit ▶ banner__btn-submit -->
-                                <button type="submit" class="banner__btn-submit"><span><em>RESERVED NOW</em></span></button>
+                                <button type="submit" class="banner__btn-submit">
+                                    <span class="banner__btn-text">RESERVED NOW</span>
+                                    <span class="text-arrow"></span>
+                                </button>
                                 <a href="#" class="banner__btn-play"> <!-- 8. banner__summary--play ▶ banner__btn-play -->
                                     <span class="banner__btn-play-tit">Watch our story</span><!--10. btn__play--tit ▶ banner__btn-play-tit  -->
                                 </a>

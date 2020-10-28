@@ -34,7 +34,7 @@
     .about .title span {font-size: 0.93rem; letter-spacing: 1.5px;}
     .about .title h2 {font-size: 25px;}
     .about .title p {font-size: 0.73em;}
-    .about .btn__primary--pink {width: 100px; height: 30px; font-size: 15%;}
+    .about .btn__primary--pink {width: 100px; height: 30px; font-size: 0.5rem;}
 
     /* feature */
     .feature {margin-top: 85px;}

@@ -13,7 +13,7 @@ header .nav ul li {margin-right: 40px;}
 
 /* skip-menu__accessbility */
 .skip-menu {position: absolute; width: 100%; z-index: 9999;}
-.skip-menu ul li a {display: block; position: absolute; top: -100px; left: 0; width: 100%; height:50px; background:#ff817e; color:#fff; font-weight: bold; font-size: 20px; text-align: center; line-height:50px; box-sizing:border-box;}
+.skip-menu ul li a {display: block; position: absolute; top: -100px; left: 0; width: 100%; height:50px; background: #ff817e; color:#fff; font-weight: bold; font-size: 20px; text-align: center; line-height:50px; box-sizing:border-box;}
 .skip-menu ul li a:focus {top:0;}
 
 
@@ -21,23 +21,17 @@ header .nav ul li {margin-right: 40px;}
 .banner {padding: 9.98% 0 0 20.49%; background: url(../images/bg_01.png)no-repeat left bottom; background-size: contain;}
 .banner .inner {text-align: left; margin : 0;}
 .banner .title {font-family: 'Rufina', serif;}
-.banner .title strong {font-weight: 400; color:#ff817e; font-size: 1rem; line-height: 1.33em; letter-spacing: .1em; text-transform: uppercase;}
+.banner .title strong {font-weight: 400; color: #ff817e; font-size: 1rem; line-height: 1.33em; letter-spacing: .1em; text-transform: uppercase;}
 .banner .title h2 {margin-top: 1.75%; font-weight: 700; font-size: 4rem; line-height: 1.3em; color: #000;}
 .banner .title p {margin-top: 2.45%; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 1rem; line-height: 1.8em; color: #000;}
 .banner .title p + p {margin-top: 0;}
 .banner .banner__btn {display:flex; margin-top: 4.561%;}
-.banner .banner__btn-submit {padding: 1.2em 3.45em 1.2em 1.95em; margin-right: 4.912%; border: none; background:#ff817e; font-weight: 500; color: #fff; cursor: pointer;}
-.banner .banner__btn-submit:hover {color: #000;}
-.banner .banner__btn-submit span {display: inline-block; width: 100%; font-size: .86rem; text-align: left; box-sizing: border-box;}
-.banner .banner__btn em {position: relative;}
-.banner .banner__btn em::after {position: absolute; top: 50%; transform: translateY(-50%); width: 12px; height: 12px; margin-left: 7px; background-image: url(../images/arrow_btn_.png); background-position: -54px -20px; content: '';}
-.banner .banner__btn-submit:hover em::after {background-position-x:-66px;}
-
+.banner .banner__btn-submit {background: #ff817e;}
 
 .banner .banner__btn-play {display: flex; position: relative; font-size: 1rem; font-weight: 500; cursor: pointer;}
 .banner .banner__btn-play::before { position: absolute; left: 0; top: 3px; width: 44px; height: 44px; border-radius: 50%; background-color: #fcf5ee; content: '';}
-.banner .banner__btn-play::after { position: absolute; left: 22px; top: 18px; width: 0; height: 0; border:7px solid transparent; border-color:transparent transparent#ff817e transparent; transform: rotate(90deg); content: '';}
-.banner .banner__btn-play .banner__btn-play-tit { margin-left: 50px; font-size: 1rem; line-height: 3.33em;}
+.banner .banner__btn-play::after { position: absolute; left: 22px; top: 18px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 7px solid transparent; border-left: 10px solid #ff817e; transform: rotate(0deg); content: '';}
+.banner .banner__btn-play .banner__btn-play-tit { margin-left: 60px; font-size: 1rem; line-height: 3.33em;}
 
 
 /* 2. about */
@@ -80,16 +74,16 @@ header .nav ul li {margin-right: 40px;}
 .testimonials .testimonials__item .testimonials__name em {font-family: 'Rufina', serif; font-size: 1.46em; font-weight: 400;}
 
 
-.testimonials .indicator {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 10%; left: 50%; width: 10%; transform: translateX(-50%);}
+.testimonials .indicator {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 10%; transform: translateX(-50%);}
 .testimonials .indicator .indicator__btn {overflow: hidden; position: relative; width: 10px; height: 10px;}
 .testimonials .indicator .indicator__btn button {position:absolute; width: 100%; height: 100%; background-color:#ffc3c2; border-radius: 50%; cursor: pointer;}
-.testimonials .indicator .indicator--on button {background-color:#ff817e; transition: .3s;}
+.testimonials .indicator .indicator--on button {background-color: #ff817e; transition: .3s;}
 
 .testimonials .indicator .indicator--play-pause button {width: 10px; height:11px; background-image: url(../images/arrow_btn_.png); background-position-x: 42px; text-indent: -9999px;}
 .testimonials .indicator .is-pause button {background-position-x: 33px; background-color: transparent;}
 
 .testimonials .slider__arrow {display: flex; align-items: center; width:100%; height:100%;}
-.testimonials .slider__arrow-inner {width: 63.058%; margin: 0 auto; z-index: 997;}
+.testimonials .slider__arrow-inner {width: 63.058%; margin: 0 auto; z-index: 998;}
 .testimonials .slider__arrow a {display: inline-block; width: 25px; height: 46px; text-indent: -9999px; background-image: url(../images/arrow_btn_.png); background-size: cover; cursor:pointer;}
 .testimonials .slider__arrow .slider__arrow-btn--prev {float: left;}
 .testimonials .slider__arrow .slider__arrow-btn--next {float: right; background-position-x: 65px;}
@@ -168,7 +162,7 @@ header .nav ul li {margin-right: 40px;}
 .contact .contact__cont {display: flex; height: auto; padding: 92px 98px 0 98px;}
 .contact .contact__cont .contact__info {width: 322px; margin-right: 98px;}
 .contact .contact__cont .contact__info li {display: flex; margin-bottom: 12.98%; box-sizing: border-box;}
-.contact .contact__cont .contact__info li h3 {display: inline-block; width: 50px; height: 50px; border-radius: 50%; background:#ff817e url(../images/visit--info__icon.png)no-repeat;
+.contact .contact__cont .contact__info li h3 {display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: #ff817e url(../images/visit--info__icon.png)no-repeat;
     background-position-X: 16px; background-position-y: 15px; text-indent: -9999px; content: '';}
 
 
@@ -247,5 +241,5 @@ footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position
 footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -150px -50px;}
 
 footer p {padding : 50px 0; font-size: 0.86em; text-transform: uppercase; color: #888;}
-footer p em {color:#ff817e;}
+footer p em {color: #ff817e;}
 

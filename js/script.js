@@ -3,6 +3,19 @@ $(function(){
 		e.preventDefault();
 	});
 
+    // section--banner - hover (ie)에서 after
+
+    // const reserveArrow = $('.banner__btn-submit').find('> .banner__btn-text');
+    // console.log(reserveArrow);
+    // $('.banner__btn-submit').hover(function(){
+    //     reserveArrow.append('<span>ddd</span>');
+    // }, function(){
+    //     reserveArrow.find('> span').remove();
+    // });
+
+
+
+
     // section--team
     var $maNagerLi = $('.tiles > li.team__manager'),
         $tabList = $('.tablist'),
@@ -205,13 +218,14 @@ $(function(){
     $('.gnb__button').on({
         click : function(){
             menuBarClickFn();
+            // attrFocus();
         }
     });
 
     // 햄버거메뉴 리스트
     function menuBarClickFn(){
         if( clkbtn === false) {
-            clkbtn = true; //클릭한 상태로 true변환
+            clkbtn = true;
             $('.nav__bar--mo').stop().animate({opacity:1},0,function(e){
                 $(this).stop().animate({left : 0}, 500);
             })
@@ -221,7 +235,6 @@ $(function(){
         else if( clkbtn == true ){
             clkbtn = false;
             console.log(clkbtn);
-            $('.gnb--closebtn').removeAttr('tabIndex');
             $('.nav__btn-wrap').removeClass('nav__btn-x');
             $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
                 $(this).stop().animate({opacity : 0},0);
@@ -229,17 +242,10 @@ $(function(){
         }
     }
 
-    // 모달 안에서만 포커스 이동
-
-    // 모달에서 마지막으로 close버튼으로 포커스
-    lastNaVbar.on("focusout", function(){
-        $('.gnb--closebtn').attr("tabIndex",0).focus();
-    });
-
 
     // 딤bg 클릭했을 때 animation
     function navBarDemmedFn(){
-        $('.gnb--dimmed').on({
+        $('.gnb__dimmed-bg').on({
             click : function(){
                 $('.nav__btn-wrap').removeClass('nav__btn-x');
                 $('.nav__bar--mo').stop().animate({left : 100 +'%'}, 500, function(){
@@ -249,17 +255,6 @@ $(function(){
         })
     }
     navBarDemmedFn();
-
-
-
-
-    // 반응형 width & height
-    var winW = $(window).innerWidth();
-    const featureTile = $('.feature__cont').find('li');
-    if( winW <= 767 ){
-        // $(featureTile).height( $(featureTile) * 0.83 );
-        console.log('dddd');
-    }
 
 
     // swipe
@@ -282,3 +277,18 @@ $(function(){
         }
     })
 });
+
+
+    // 반응형 width & height
+    // $(window).resize(function(){
+    //     var winW = $(window).innerWidth();
+    //     const featureTile = $('.feature__cont').find('li');
+    //     if( winW <= 767 ){
+    //         // 5. section--testimonials
+    //         const tesTimonialsW = $('.testimonials').width();
+    //             console.log('width:' +tesTimonialsW);
+    //             $('.testimonials').height( tesTimonialsW * 0.557);
+    //             console.log('height:' + $('.testimonials').height());
+    //         // $('.section--testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2});
+    //     }
+    // });
