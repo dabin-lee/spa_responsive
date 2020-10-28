@@ -19,18 +19,20 @@
     header .header__logo a {width: 26px; height: 36px;}
     header .header__logo a img {max-width: 100%;}
 
-    header .nav {padding: 0;}
-    header .nav .nav__btn-wrap {z-index: 99999; position: absolute; top: 10px; right: 16px;}
-    header .nav .nav__btn-wrap .gnb__button {display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 32px; cursor: pointer; box-sizing: border-box;}
-    header .nav .nav__btn-wrap .gnb__button span {display: inline-block; width: 100%; height: 4px; background: #ff817e; box-sizing: border-box; transition: .3s;}
+    header .nav {position:relative; padding: 0;}
+    /* header .nav .nav__btn-wrap {z-index: 9999999; position: absolute; top: 10px; right: 16px;} */
+    header .nav .nav__btn-wrap {float: right;}
+    header .nav .nav__btn-wrap .gnb__button {z-index: 9999999; position:absolute; top:10px; right: 0; display: block; width: 30px; height: 30px;line-height: 0; cursor: pointer; box-sizing: border-box;}
+    header .nav .nav__btn-wrap .gnb__button span {position:absolute; top:0; left: 0; display: inline-block; width: 100%; height: 4px; background: #ff817e; box-sizing: border-box; transition: .3s;}
+    header .nav .nav__btn-wrap .gnb__button span:nth-child(2) {top: 13px;}
+    header .nav .nav__btn-wrap .gnb__button span:nth-child(3) {top: 26px;}
     header .nav .nav__btn-wrap .gnb__button .gnb--closebtn{display: inline-block; position: absolute; top:0; left:0; width: 100%; height: 100%; background-color: transparent; text-indent: -9999px;}
 
-    header .nav .nav__btn-x {position: fixed;}
-    header .nav .nav__btn-x span {position: absolute; top: 50%; transition: .3s;}
-    header .nav .nav__btn-x span:nth-child(1){transform: rotate(-135deg);}
+    header .nav .nav__btn-x {position: fixed; right: 15px; z-index: 9999999; display: block;}
+    header .nav .nav__btn-x span {position: absolute; transition: all .3s ease-in-out;}
+    header .nav .nav__btn-x span:nth-child(1){transform: rotate(45deg); -webkit-transform: rotate(45deg); top: 9px;}
     header .nav .nav__btn-x span:nth-child(2){opacity: 0;}
-    header .nav .nav__btn-x span:nth-child(3){transform: rotate(135deg);}
-
+    header .nav .nav__btn-x .gnb__button span:nth-child(3){transform: rotate(-45deg); -webkit-transform: rotate(-45deg); top: 9px;}
 
     /* click - nav__bar  */
     header nav .nav__bar--mo {position: fixed; top: 0; left: 100%; width: 100%;}
@@ -43,7 +45,7 @@
 
 
     /* banner */
-    .banner {margin-top: 30px; padding: 0; background-size: 150px 290px; background-position: 0 0;}/*bg사이즈 확인*/
+    .banner {margin-top: 30px; padding: 0; background-size: 150px 260px; background-position: 0 0;}/*bg사이즈 확인*/
     .banner .inner {padding-left: 80px; box-sizing: border-box;}
     .banner .inner .title {padding: 0 0;}
     .banner .inner .title strong{font-size: .5rem;}
