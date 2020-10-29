@@ -3,18 +3,6 @@ $(function(){
 		e.preventDefault();
 	});
 
-    // section--banner - hover (ie)에서 after
-
-    // const reserveArrow = $('.banner__btn-submit').find('> .banner__btn-text');
-    // console.log(reserveArrow);
-    // $('.banner__btn-submit').hover(function(){
-    //     reserveArrow.append('<span>ddd</span>');
-    // }, function(){
-    //     reserveArrow.find('> span').remove();
-    // });
-
-
-
 
     // section--team
     var $maNagerLi = $('.tiles > li.team__manager'),
@@ -269,7 +257,7 @@ $(function(){
             767: {
                 allowTouchMove : true, //드래그 방지
                 loop: true, // 무한 반복
-                slidesPerView: 3.12, //동시에 보여줄 슬라이드 개수
+                slidesPerView: 1.3, //동시에 보여줄 슬라이드 개수
                 slidesPerGroup : 1.45, //그룹으로 묶을 수
                 initialSlide:1.2,
                 centeredSlides: true //가운데 정렬
@@ -282,19 +270,7 @@ $(function(){
     // 반응형 width & height
     $(window).resize(function(){
         var winW = $(window).innerWidth();
-        // const featureTile = $('.feature__cont').find('li');
-        // if( winW <= 767 ){
-        //     // 5. section--testimonials
-        //     const tesTimonialsW = $('.testimonials').width();
-        //         console.log('width:' +tesTimonialsW);
-        //         $('.testimonials').height( tesTimonialsW * 0.557);
-        //         console.log('height:' + $('.testimonials').height());
-        //     // $('.section--testimonials .article__testimonials').css({backgroundPositionY : (winH-sec5H)/2});
-        // }
-
         if( winW <= 767 ){
-            $('.feature__cont').find('li').height( $(this).width() * 0.43 );
+            $('.feature__cont').find('li').height( $(this).width() * 0.83 );
         }
-
-
     });
