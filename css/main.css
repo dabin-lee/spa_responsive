@@ -33,9 +33,20 @@ header .nav ul li {margin-right: 40px;}
 .banner .banner__btn-submit {position: relative; width: 170px; height: 50px; margin-right: 4.912%; border: none; background: var(--color-pink); background-color: #ff817e; font-weight: 500; color: #fff; cursor: pointer;}
 .banner .banner__btn-submit:hover {color: #000;}
 .banner .banner__btn-submit .banner__btn-text {display: inline-block; width: 100%; padding-left: 20px; font-size: .86rem; text-align: left; line-height: 3.88em; box-sizing: border-box;}
-.banner .banner__btn-submit .text-arrow {position: absolute; top: 19px; left: 135px; display: inline-block; width: 12px; height: 12px; background-image: url(../images/arrow_btn_.png); background-position: -54px -20px;}
+.banner .banner__btn-submit .text-arrow {position: absolute; top: 19px; left: 135px; display: inline-block; width: 12px; height: 12px; background-image: url(../images/arrow_btn_.png); background-position: -54px -20px; animation: bounce 2s infinite; }
 .banner .banner__btn-submit:hover .text-arrow {width: 12px; height: 12px; background-position: -66px -20px;}
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateX(20px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
+}
 
 
 .banner .banner__btn-play {display: flex; position: relative; font-size: 1rem; font-weight: 500; cursor: pointer;}
