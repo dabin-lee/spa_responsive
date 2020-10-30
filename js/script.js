@@ -264,13 +264,20 @@ $(function(){
             },
         }
     })
+
+
+        // 반응형 width & height
+        $(window).resize(function(){
+            var winW = $(window).innerWidth();
+            if( winW <= 767 ){
+                console.log(winW);
+                $('.feature__cont').find('li').height( $(this).width() * 0.83 );
+                $pause = 1;
+                rollingPauseFn();
+            }
+        });
+
+
 });
 
 
-    // 반응형 width & height
-    $(window).resize(function(){
-        var winW = $(window).innerWidth();
-        if( winW <= 767 ){
-            $('.feature__cont').find('li').height( $(this).width() * 0.83 );
-        }
-    });

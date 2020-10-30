@@ -203,17 +203,17 @@ footer .footer__sns ul li:last-child::before {display: none;}
 footer .footer__sns ul li a {display: block; text-indent: -9999px;}
 
 /* footer - type01 */
-footer .footer__sns .footer__sns--type01 li a {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 100px 50px;}
+footer .footer__sns .footer__sns--type01 li a {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 130px 65px;}
 footer .footer__sns .footer__sns--type01 .facebook a {width:7px; height:14px; background-position-x: 0;}
-footer .footer__sns .footer__sns--type01 .twitter a {width:13px; height:13px; background-position-x: -18px;}
-footer .footer__sns .footer__sns--type01 .instagram a {width:13px; height:14px; background-position-x: -35px;}
-footer .footer__sns .footer__sns--type01 .vingle a {width:13px; height:13px; background-position-x: -55px;}
+footer .footer__sns .footer__sns--type01 .twitter a {width:13px; height:13px; background-position-x: -23px;}
+footer .footer__sns .footer__sns--type01 .instagram a {width:13px; height:14px; background-position-x: -44px;}
+footer .footer__sns .footer__sns--type01 .vingle a {width:13px; height:13px; background-position-x: -67px;}
 
-footer .footer__sns .footer__sns--type01 li:hover a {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 100px 50px;}
-footer .footer__sns .footer__sns--type01 .facebook:hover a {width:7px; height:14px; background-position: 0 -19px;}
-footer .footer__sns .footer__sns--type01 .twitter:hover a {width:13px; height:11px; background-position: -18px -19px;}
-footer .footer__sns .footer__sns--type01 .instagram:hover a {width:13px; height:14px; background-position: -35px -19px;}
-footer .footer__sns .footer__sns--type01 .vingle:hover a {width:13px; height:11px; background-position: -55px -19px;}
+footer .footer__sns .footer__sns--type01 li:hover a {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 130px 65px;}
+footer .footer__sns .footer__sns--type01 .facebook:hover a {width:7px; height:14px; background-position: 0 -29px;}
+footer .footer__sns .footer__sns--type01 .twitter:hover a {width:13px; height:11px; background-position: -23px -29px;}
+footer .footer__sns .footer__sns--type01 .instagram:hover a {width:13px; height:14px; background-position: -44px -29px;}
+footer .footer__sns .footer__sns--type01 .vingle:hover a {width:13px; height:11px; background-position: -67px -29px;}
 
 /* footer - type02 */
 
@@ -221,34 +221,34 @@ footer .footer__sns .footer__sns--type02 .facebook {margin: 0 0.701% 0 1.14%;}
 footer .footer__sns .footer__sns--type02 li::before {left: 28px;}
 footer .footer__sns .footer__sns--type02 .facebook::before {left: 21px;}
 footer .footer__sns .footer__sns--type02 li a {position:relative; width:13px; height:14px;}
-footer .footer__sns .footer__sns--type02 li a::before {content: ''; position: absolute; top:0; left:0; width:13px; height:14px; background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 100px 50px;}
+footer .footer__sns .footer__sns--type02 li a::before {content: ''; position: absolute; top:0; left:0; width:13px; height:14px; background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 130px 65px;}
 footer .footer__sns .footer__sns--type02 .facebook a::before {background-position-x: 0;}
-footer .footer__sns .footer__sns--type02 .twitter a::before {background-position-x: -18px; background-position-y: 1px;}
-footer .footer__sns .footer__sns--type02 .instagram a::before {background-position-x: -35px;}
-footer .footer__sns .footer__sns--type02 .vingle a::before {background-position-x: -55px;}
+footer .footer__sns .footer__sns--type02 .twitter a::before {background-position-x: -23px;}
+footer .footer__sns .footer__sns--type02 .instagram a::before {background-position-x: -44px;}
+footer .footer__sns .footer__sns--type02 .vingle a::before {background-position-x: -67px;}
 
-footer .footer__sns .footer__sns--type02 li:hover a::before {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 100px 50px;}
-footer .footer__sns .footer__sns--type02 .facebook:hover a::before {background-position: 0 -19px;}
-footer .footer__sns .footer__sns--type02 .twitter:hover a::before {background-position: -18px -18px;}
-footer .footer__sns .footer__sns--type02 .instagram:hover a::before {background-position: -35px -19px;}
-footer .footer__sns .footer__sns--type02 .vingle:hover a::before {background-position: -55px -19px;}
+footer .footer__sns .footer__sns--type02 li:hover a::before {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 130px 65px;}
+footer .footer__sns .footer__sns--type02 .facebook:hover a::before {background-position: 0 -29px;}
+footer .footer__sns .footer__sns--type02 .twitter:hover a::before {background-position: -23px -29px;}
+footer .footer__sns .footer__sns--type02 .instagram:hover a::before {background-position: -44px -29px;}
+footer .footer__sns .footer__sns--type02 .vingle:hover a::before {background-position: -67px -29px;}
 
 /* footer - type03 */
 footer .footer__sns .footer__sns--type03 .facebook {margin: 0 0.701% 0 1.14%;}
 footer .footer__sns .footer__sns--type03 li::before {left: 28px;}
 footer .footer__sns .footer__sns--type03 .facebook::before {left: 21px;}
 
-footer .footer__sns .footer__sns--type03 li a {width:13px; height:14px; background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 100px 50px;}
+footer .footer__sns .footer__sns--type03 li a {width:13px; height:14px; background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 130px 65px;}
 footer .footer__sns .footer__sns--type03 .facebook a {background-position-x: 0;}
-footer .footer__sns .footer__sns--type03 .twitter a {background-position-x: -18px;}
-footer .footer__sns .footer__sns--type03 .instagram a {background-position-x: -35px;}
-footer .footer__sns .footer__sns--type03 .vingle a {background-position-x: -55px;}
+footer .footer__sns .footer__sns--type03 .twitter a {background-position-x: -23px;}
+footer .footer__sns .footer__sns--type03 .instagram a {background-position-x: -44px;}
+footer .footer__sns .footer__sns--type03 .vingle a {background-position-x: -67px;}
 
-footer .footer__sns .footer__sns--type03 li:hover a {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 100px 50px;}
-footer .footer__sns .footer__sns--type03 .facebook:hover a {background-position: 0 -19px;}
-footer .footer__sns .footer__sns--type03 .twitter:hover a {background-position: -18px -19px;}
-footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position: -35px -19px;}
-footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -55px -19px;}
+footer .footer__sns .footer__sns--type03 li:hover a {background: url(../images/sns_sprite_ne.png)no-repeat; background-size: 130px 65px;}
+footer .footer__sns .footer__sns--type03 .facebook:hover a {background-position: 0 -29px;}
+footer .footer__sns .footer__sns--type03 .twitter:hover a {background-position: -23px -29px;}
+footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position: -44px -29px;}
+footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -67px -29px;}
 
 footer p {padding : 50px 0; font-size: 0.86em; text-transform: uppercase; color: #888;}
 footer p em {color: var(--color-pink); color: #ff817e;}

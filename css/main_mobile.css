@@ -183,15 +183,15 @@
 
     footer .footer__sns .footer__sns--type01 li a {width: 24px; height: 24px; background-size: initial;}
     footer .footer__sns .footer__sns--type01 .facebook a {width: 12px; height: 24px; margin-right: 12px;}
-    footer .footer__sns .footer__sns--type01 .twitter a{width: 24px; height: 24px; background-position-x: -38px;}
-    footer .footer__sns .footer__sns--type01 .instagram a {width: 24px; height: 24px; background-position-x: -73px;}
-    footer .footer__sns .footer__sns--type01 .vingle a {width: 24px; height: 24px; background-position-x: -109px;}
+    footer .footer__sns .footer__sns--type01 .twitter a{width: 24px; height: 24px; background-position-x: -35px}
+    footer .footer__sns .footer__sns--type01 .instagram a {width: 24px; height: 24px; background-position-x: -68px;}
+    footer .footer__sns .footer__sns--type01 .vingle a {width: 24px; height: 24px; background-position-x: -101px;}
 
     footer .footer__sns .footer__sns--type01 li:hover a {width: 24px; height: 24px; background-size: initial;}
-    footer .footer__sns .footer__sns--type01 .facebook:hover a {width: 12px; height: 24px; background-position:0 -38px;}
-    footer .footer__sns .footer__sns--type01 .twitter:hover a {width: 24px; height: 24px; background-position: -38px -38px;}
-    footer .footer__sns .footer__sns--type01 .instagram:hover a {width: 24px; height: 24px; background-position: -73px -38px;}
-    footer .footer__sns .footer__sns--type01 .vingle:hover a {width: 24px; height: 24px; background-position: -109px -38px;}
+    footer .footer__sns .footer__sns--type01 .facebook:hover a {width: 12px; height: 24px; background-position:0 -44px;}
+    footer .footer__sns .footer__sns--type01 .twitter:hover a {width: 24px; height: 24px; background-position: -35px -44px;}
+    footer .footer__sns .footer__sns--type01 .instagram:hover a {width: 24px; height: 24px; background-position: -68px -44px;}
+    footer .footer__sns .footer__sns--type01 .vingle:hover a {width: 24px; height: 24px; background-position: -101px -44px;}
 
     /* footer - type02 */
     footer .footer__sns .footer__sns--type02 .facebook { margin: 0; margin-right: 14px;}
@@ -201,15 +201,15 @@
     footer .footer__sns .footer__sns--type02 li a {width: 0; height: 0;}
     footer .footer__sns .footer__sns--type02 li a::before {width: 24px; height: 24px; background-size: initial;}
     footer .footer__sns .footer__sns--type02 .facebook a::before {background-position-x: 0;}
-    footer .footer__sns .footer__sns--type02 .twitter a::before {background-position-x: -38px;}
-    footer .footer__sns .footer__sns--type02 .instagram a::before {background-position-x: -73px;}
-    footer .footer__sns .footer__sns--type02 .vingle a::before {background-position-x: -109px;}
+    footer .footer__sns .footer__sns--type02 .twitter a::before {background-position-x: -35px;}
+    footer .footer__sns .footer__sns--type02 .instagram a::before {background-position-x: -68px;}
+    footer .footer__sns .footer__sns--type02 .vingle a::before {background-position-x: -101px;}
 
     footer .footer__sns .footer__sns--type02 li:hover a::before {background-size: initial;}
-    footer .footer__sns .footer__sns--type02 .facebook:hover a::before {background-position:0 -38px;}
-    footer .footer__sns .footer__sns--type02 .twitter:hover a::before {background-position: -38px -37px;}
-    footer .footer__sns .footer__sns--type02 .instagram:hover a::before {background-position: -73px -38px;}
-    footer .footer__sns .footer__sns--type02 .vingle:hover a::before {background-position: -109px -38px;}
+    footer .footer__sns .footer__sns--type02 .facebook:hover a::before {background-position:0 -44px;}
+    footer .footer__sns .footer__sns--type02 .twitter:hover a::before {background-position: -35px -44px;}
+    footer .footer__sns .footer__sns--type02 .instagram:hover a::before {background-position: -68px -44px;}
+    footer .footer__sns .footer__sns--type02 .vingle:hover a::before {background-position: -101px -44px;}
 
     /* footer - type03 */
 
@@ -219,15 +219,15 @@
 
     footer .footer__sns .footer__sns--type03 li a {width: 24px; height: 24px; background-size: initial;}
     footer .footer__sns .footer__sns--type03 .facebook a {background-position-x: 0;}
-    footer .footer__sns .footer__sns--type03 .twitter a {background-position-x: -38px;}
-    footer .footer__sns .footer__sns--type03 .instagram a {background-position-x: -73px;}
-    footer .footer__sns .footer__sns--type03 .vingle a {background-position-x: -109px;}
+    footer .footer__sns .footer__sns--type03 .twitter a {background-position-x: -35px;}
+    footer .footer__sns .footer__sns--type03 .instagram a {background-position-x: -68px;}
+    footer .footer__sns .footer__sns--type03 .vingle a {background-position-x: -101px;}
 
     footer .footer__sns .footer__sns--type03 li:hover a {background-size: initial;}
-    footer .footer__sns .footer__sns--type03 .facebook:hover a {background-position:0 -38px;}
-    footer .footer__sns .footer__sns--type03 .twitter:hover a {background-position: -38px -38px;}
-    footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position: -73px -38px;}
-    footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -109px -38px;}
+    footer .footer__sns .footer__sns--type03 .facebook:hover a {background-position:0 -44px;}
+    footer .footer__sns .footer__sns--type03 .twitter:hover a {background-position: -35px -44px;}
+    footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position: -66px -44px;}
+    footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -101px -44px;}
 }
 
     /*: mobile ~ 380 */
