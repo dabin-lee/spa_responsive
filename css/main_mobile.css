@@ -49,7 +49,7 @@
     .banner .inner .title {padding: 0 0;}
     .banner .inner .title strong{font-size: .8rem;}
     .banner .inner .title h2 {margin: 12px 0; font-size: 2rem;}
-    .banner .inner .title p {margin-top: 0; font-size: .8rem; line-height: 1.86;}
+    .banner .inner .title p {margin-top: 0; margin-right: 1.5em; font-size: .8rem; line-height: 1.86;}
 
     .banner .banner__btn {display: block; margin-top: 24px; line-height:0;}
     .banner .banner__btn-submit {width: 134px; height: 32px; padding-left: 12px; margin-right: 0;}
@@ -145,7 +145,7 @@
     .reserved .reserved__wrap .reserved__cont .form__note { width: 100%; margin: 2.66em 0 3.33em;}
     .reserved .reserved__wrap .reserved__cont .btn__primary--pink {width: auto; height: 30px; padding:0 15px;}
     .reserved .reserved__wrap .reserved__cont .btn__primary--pink span {font-size: 0.8rem;}
-    .reserved .reserved__wrap .reserved__cont .reseve__date ,.reserved .reserved__wrap .reserved__cont .reseve__time{background-position: 95% 6px;}
+    .reserved .reserved__wrap .reserved__cont .reseve__date ,.reserved .reserved__wrap .reserved__cont .reseve__time{background-position: 95% 1px;}
 
     /* section--blog */
     .blog__cont {padding: 0 16px;}
@@ -237,12 +237,12 @@
     .testimonials .testimonials__item p {margin-top: 8.6em}
 }
 @media ( max-width: 474px ){
-    .testimonials {height: 480px;}
+    .testimonials {height: 550px;}
     /* .testimonials .testimonials__item p {margin-top: 8.6em} */
     footer .inner .footer-nav__bar .nav__bar {margin: 26px 20px 0;}
 }
 
 @media ( max-width: 321px ){
-    /* .testimonials {height: 490px;} */
+    .testimonials {height: 620px;}
     .reserved .reserved__wrap .reserved__cont input, select{width: calc(100% - 52%);}
 }
