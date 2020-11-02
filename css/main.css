@@ -17,7 +17,7 @@ header .nav ul li {margin-right: 40px;}
 
 /* skip-menu__accessbility */
 .skip-menu {position: absolute; width: 100%; z-index: 9999;}
-.skip-menu ul li a {display: block; position: absolute; top: -100px; left: 0; width: 100%; height:50px; background: var(--color-pink); background-color: #ff817e; color:#fff; font-weight: bold; font-size: 20px; text-align: center; line-height:50px; box-sizing:border-box;}
+.skip-menu ul li a {display: block; position: absolute; top: -100px; left: 0; width: 100%; height:50px; background-color: #ff817e; background: var(--color-pink); color:#fff; font-weight: bold; font-size: 20px; text-align: center; line-height:50px; box-sizing:border-box;}
 .skip-menu ul li a:focus {top:0;}
 
 
@@ -25,12 +25,12 @@ header .nav ul li {margin-right: 40px;}
 .banner {padding: 9.98% 0 0 20.49%; background: url(../images/bg_01.png)no-repeat left bottom; background-size: contain;}
 .banner .inner {text-align: left; margin : 0;}
 .banner .title {font-family: 'Rufina', serif;}
-.banner .title strong {font-weight: 400; color: var(--color-pink); color: #ff817e; font-size: 1rem; line-height: 1.33em; letter-spacing: .1em; text-transform: uppercase;}
+.banner .title strong {font-weight: 400; color: #ff817e; color: var(--color-pink); font-size: 1rem; line-height: 1.33em; letter-spacing: .1em; text-transform: uppercase;}
 .banner .title h2 {margin-top: 1.75%; font-weight: 700; font-size: 4rem; line-height: 1.3em; color: #000;}
 .banner .title p {margin-top: 2.45%; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 1rem; line-height: 1.8em; color: #000;}
 .banner .title p + p {margin-top: 0;}
 .banner .banner__btn {display:flex; margin-top: 4.561%;}
-.banner .banner__btn-submit {position: relative; width: 170px; height: 50px; margin-right: 4.912%; border: none; background: var(--color-pink); background-color: #ff817e; font-weight: 500; color: #fff; cursor: pointer;}
+.banner .banner__btn-submit {position: relative; width: 170px; height: 50px; margin-right: 4.912%; border: none; background-color: #ff817e; background: var(--color-pink); font-weight: 500; color: #fff; cursor: pointer;}
 .banner .banner__btn-submit:hover {color: #000;}
 .banner .banner__btn-submit .banner__btn-text {display: inline-block; width: 100%; padding-left: 20px; font-size: .86rem; text-align: left; line-height: 3.88em; box-sizing: border-box;}
 .banner .banner__btn-submit .text-arrow {position: absolute; top: 19px; left: 135px; display: inline-block; width: 12px; height: 12px; background-image: url(../images/arrow_btn_.png); background-position: -54px -20px; animation: bounce 2s infinite; }
@@ -66,7 +66,6 @@ header .nav ul li {margin-right: 40px;}
 /* 3. feature -- responsive */
 .feature {margin-top: 140px;}
 .feature .feature__cont {display: flex; justify-content: center;}
-/* .feature .feature__cont ul {width: ;} */
 .feature .feature__cont ul li {width: calc(100% / 4); height: 570px; margin-right: 2px; padding-top: 310px; background: #ddd; background-position: 50% 45%; background-repeat : no-repeat; background-size : cover; text-align: center; box-sizing: border-box;}
 .feature .feature__cont ul li:last-child {margin-right: 0;}
 .feature .feature__cont ul li span {visibility: hidden; font-family: 'Rufina', serif; font-weight: 500; font-size: 0.9566em; color: #fff;}
@@ -262,5 +261,5 @@ footer .footer__sns .footer__sns--type03 .instagram:hover a {background-position
 footer .footer__sns .footer__sns--type03 .vingle:hover a {background-position: -67px -29px;}
 
 footer p {padding : 50px 0; font-size: 0.86em; text-transform: uppercase; color: #888;}
-footer p em {color: var(--color-pink); color: #ff817e;}
+footer p em {color: #ff817e; color: var(--color-pink);}
 

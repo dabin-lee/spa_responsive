@@ -3,6 +3,7 @@ $(function(){
 		e.preventDefault();
 	});
 
+    var winW = $(window).width();
 
     // section--team
     var $maNagerLi = $('.tiles > li.team__manager'),
@@ -160,7 +161,11 @@ $(function(){
         // autoTimer
         function autoPlayFn(){
             goToslide();
-            rollingPlayFn()
+            rollingPlayFn();
+            if(winW < 767){
+                $pause = 1;
+                rollingPauseFn()
+            }
         }
         autoPlayFn();
 
@@ -201,12 +206,11 @@ $(function(){
 
     // header = navbar
     var clkbtn = false; //클릭안한 초기값
-    var lastNaVbar = $('.nav__bar--mo').find('li').last();
+    // var lastNaVbar = $('.nav__bar--mo').find('li').last();
 
     $('.gnb__button').on({
         click : function(){
             menuBarClickFn();
-            // attrFocus();
         }
     });
 
@@ -265,10 +269,9 @@ $(function(){
         }
     })
 
-
         // 반응형 width & height
         $(window).resize(function(){
-            var winW = $(window).innerWidth();
+            var winW = $(window).width();
             if( winW <= 767 ){
                 console.log(winW);
                 $('.feature__cont').find('li').height( $(this).width() * 0.83 );
@@ -276,8 +279,6 @@ $(function(){
                 rollingPauseFn();
             }
         });
-
-
 });
 
 
