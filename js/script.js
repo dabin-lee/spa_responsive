@@ -162,11 +162,11 @@ $(function(){
         function autoPlayFn(){
             goToslide();
             rollingPlayFn();
-            if(winW < 767){
-                $pause = 1;
-                rollingPauseFn()
+                if(winW < 767){
+                    $pause = 1;
+                    rollingPauseFn()
+                }
             }
-        }
         autoPlayFn();
 
 
@@ -273,7 +273,7 @@ $(function(){
         $(window).resize(function(){
             var winW = $(window).width();
             if( winW <= 767 ){
-                console.log(winW);
+                // console.log(winW);
                 $('.feature__cont').find('li').height( $(this).width() * 0.83 );
                 $pause = 1;
                 rollingPauseFn();
